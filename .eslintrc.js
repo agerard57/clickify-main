@@ -36,6 +36,8 @@ module.exports = {
   ],
   rules: {
     indent: ["error", 2],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
     "react/no-unknown-property": ["error", { ignore: ["css"] }],
     "react/display-name": "off",
     "import/prefer-default-export": "off",

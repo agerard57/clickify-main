@@ -1,6 +1,5 @@
+import { routes } from "@/router";
+
 export const appConstants = {
-  core: {},
-  testPage: {
-    title: "title",
-  },
-};
+  routes,
+} as const;

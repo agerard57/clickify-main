@@ -13,12 +13,21 @@ export const muiTheme = {
     MuiTypography: {
       styleOverrides: {
         root: {
-          fontFamily: "Roboto",
-          fontSize: 140,
+          fontFamily: "Lexend",
+          fontSize: 14,
           fontWeightLight: 600,
           color: colorPalette.primaryBlack,
+        },
+        title: {
+          fontSize: 30,
+          fontWeight: 700,
+          letterSpacing: "1px",
+        },
+        subtitle: {
+          fontSize: 16,
+          fontWeight: 500,
         },
       },
     },
   },
-};
+} as const;

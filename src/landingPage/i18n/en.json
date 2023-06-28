@@ -1,0 +1,236 @@
+{
+  "welcome": {
+    "title": "Be closer to your clients,\nin just a few \\clicks\\!",
+    "more": "Learn more about our product..."
+  },
+  "product": {
+    "title": "We help you helping others!",
+    "subTitle": "Thanks to our help, we hope to guide your business / enterprise into fruition",
+    "sections": {
+      "unselected": {
+        "content": {
+          "1": "Clickify is an all-in-one solution that allows businesses to manage their online sales easily. With just a few clicks, you can have your e-commerce site up and running in no time. By providing a turnkey solution for digitalization, businesses can offer their customers a seamless and accessible shopping experience, no matter what challenges arise. With Clickify, you can take your business online and start selling to customers all over the world with ease",
+          "2": "Our powerful tools enable you to manage employees, customers, products, orders, and more. You'll have access to dashboards and detailed reports, providing you with the insights you need to optimize your online business and maximize your sales",
+          "3": "Clickify is the perfect platform to take your business to the next level, whether you're just starting out or looking to scale"
+        }
+      },
+      "1": {
+        "number": "1",
+        "title": "Create your account",
+        "content": {
+          "1": "Select your plan tailored to your needs!",
+          "2": "At Clickify, we understand that every business is unique, with different needs and budgets. That's why we offer three flexible plans tailored to suit your specific requirements, so you can choose the one that best fits your online business. Whether you're just starting out and need all the basics covered, or you're an e-commerce expert looking to take your store to the next level, we have a plan for you"
+        }
+      },
+      "2": {
+        "number": "2",
+        "title": "Enter your specifications",
+        "content": {
+          "1": "Stand out with a website customized to your image!",
+          "2": "You can customize your website to reflect your business image and stand out. You can add your own logo, choose colors that match your brand, and decide on the layout of your homepage",
+          "3": "In addition to customization, we also offer the ability to create user accounts with special access rights. These accounts can be used for specific roles such as order picker, merchandiser, or consultant"
+        }
+      },
+      "3": {
+        "number": "3",
+        "title": "Add your products",
+        "content": {
+          "1": "Ready to start selling?",
+          "2": "The next step is to add your products to your online store! With Clickify, it's a breeze to showcase your products and highlight their unique features with stunning images, detailed descriptions, and competitive pricing",
+          "3": "You can also create categories and tags to help customers easily navigate and find exactly what they're looking for - giving them a shopping experience that's both easy and enjoyable. And the best part? It's incredibly quick and easy to set up, so you can start selling in no time!",
+          "4": "And there you have it! In just a few simple steps, your e-commerce site is now up and running!"
+        },
+        "more": "Check out our pricing..."
+      }
+    },
+    "pricing": {
+      "title": "Ready to set up your store? Pick your plan!",
+      "subTitle": "We offer 3 plans that will give you the necessary tools to begin your adventure!",
+      "planComponent": {
+        "popular": "Popular choice",
+        "features": "Features",
+        "currency": "$",
+        "month": "month",
+        "more": "...and all the features from the previous tiers"
+      },
+      "plans": {
+        "basic": {
+          "title": "Basic",
+          "description": "Everything needed to kick start your store, manage your products and process payments",
+          "features": {
+            "1": "Taxes : 1,8% + $0,20 per purchase",
+            "2": "Up until 100 products",
+            "3": "2 Employees accounts"
+          }
+        },
+        "clickify": {
+          "title": "Clickify",
+          "description": "Take your shop to the next level with advanced reporting, lower transactions fees and more staff accounts",
+          "features": {
+            "1": "Taxes : 1,6% + $0,20 per purchase",
+            "2": "Up until 500 products",
+            "3": "5 Employees accounts",
+            "4": "Advanced reporting",
+            "5": "Add multiple stores"
+          }
+        },
+        "premium": {
+          "title": "Premium",
+          "description": "Get the best of Clickify thanks to the previous advantages, as well as more staff accounts and even lower transactions fees",
+          "features": {
+            "1": "Taxes : 1,4% + $0,20 per purchase",
+            "2": "Up until 1000 products",
+            "3": "10 Employees accounts",
+            "4": "In-app customer support"
+          }
+        }
+      }
+    },
+    "more": "Learn our story and mission..."
+  },
+  "about": {
+    "sections": {
+      "story": {
+        "title": "Our story",
+        "content": "During the COVID-19 pandemic, we saw many businesses struggling to adapt to the sudden shift towards online sales.\nMany brick-and-mortar stores were forced to close their doors, and the need for a robust online presence became more apparent than ever. We wanted to help these businesses by providing an easy and accessible solution to build an e-commerce website.\n\nThat's when we launched Clickify - a platform designed to cater to businesses of all sizes, from small startups to established enterprises.\nWith Clickify, businesses can create a fully-functional e-commerce website in just a few clicks. Our platform allows businesses to showcase their products, process payments, and manage orders without any technical expertise"
+      },
+      "mission": {
+        "title": "Our mission",
+        "content": "Clickify's mission is to empower businesses of all sizes to establish a strong online presence and compete in the digital age.\n\nWe believe that every business should have the opportunity to thrive online, regardless of their technical expertise or budget.\nOur platform simplifies the process of building an e-commerce website, making it accessible to businesses with limited resources. We strive to provide an intuitive and user-friendly platform that allows businesses to focus on what they do best - selling their products and services.\n\nAt Clickify, we're committed to supporting businesses in their digital journey and helping them reach their full potential"
+      },
+      "team": {
+        "title": "Our team",
+        "content": "Clickify is driven by a team of five dedicated developers who are passionate about helping businesses succeed online. Our team is composed of experts in various fields, including web development and design.\n\nTogether, we bring a wealth of experience and knowledge to the table, enabling us to provide our customers with top-notch services and support"
+      },
+      "more": "Any questions? Contact us!"
+    }
+  },
+  "contact": {
+    "title": "How can we help",
+    "categories": {
+      "sales": {
+        "title": "Sales",
+        "cards": {
+          "demo": {
+            "title": "Request a demo",
+            "content": "Talk to a Clickify expert about your specific requirements or for a demo",
+            "button": "Talk to our experts",
+            "modal": {
+              "title": "Request a demo",
+              "content": "Talk to a Clickify expert about your specific requirements or for a demo",
+              "form": {
+                "name": {
+                  "label": "Name *",
+                  "default": "Enter your first and last name"
+                },
+                "companyName": {
+                  "label": "Company name *",
+                  "default": "Fill out your company name"
+                },
+                "email": {
+                  "label": "Email *",
+                  "default": "Enter your email address"
+                },
+                "phoneNumber": {
+                  "label": "Phone number *",
+                  "default": "Enter your phone number"
+                },
+                "projectDetailsOrQuestions": {
+                  "label": "Project details or Questions *",
+                  "default": "Please tell us about your inquiry"
+                },
+                "button": "Send the request"
+              }
+            }
+          },
+          "pricing": {
+            "title": "Pricing",
+            "content": "Learn more about our pricing plans and find the one that best suits your needs",
+            "button": "Check out our pricing"
+          }
+        }
+      }
+    },
+    "support": {
+      "title": "Support",
+      "cards": {
+        "contactSupport": {
+          "title": "Contact the support",
+          "content": "If you're having trouble logging in, need a site/DNS transfer, or seeing fraud/usurpation, contact the support",
+          "button": "Contact us",
+          "modal": {
+            "title": "Contact the support team",
+            "content": "If you're having trouble logging in, need a site/DNS transfer, or seeing fraud/usurpation, contact the support",
+            "form": {
+              "topic": {
+                "label": "Topic *",
+                "default": "Select a topic",
+                "topics": {
+                  "order": "Order",
+                  "payments": "Payments",
+                  "userAccount": "User Account",
+                  "products": "Products",
+                  "shippingDelivery": "Shipping/Delivery",
+                  "customerService": "Customer Service",
+                  "security": "Security",
+                  "technicalIssues": "Technical Issues",
+                  "returnsAndRefunds": "Returns and Refunds",
+                  "other": "Other"
+                }
+              },
+              "companyName": {
+                "label": "Company name *",
+                "default": "Fill out your company name"
+              },
+              "email": {
+                "label": "Email *",
+                "default": "Enter your email address"
+              },
+              "subject": {
+                "label": "Subject *",
+                "default": "What is your issue about?"
+              },
+              "details": {
+                "label": "How can we help you *",
+                "default": "Please describe your issue in more details"
+              },
+              "button": "Send the request"
+            }
+          }
+        }
+      },
+      "documentation": {
+        "title": "Documentation",
+        "content": "Our documentation shows you how to use every part of Clickify",
+        "button": "View docs"
+      }
+    }
+  },
+  "footer": {
+    "sections": {
+      "aboutUs": {
+        "title": "About us",
+        "content": "Clickify provides an easy and accessible solution for businesses of all sizes to build an e-commerce website.\nMade for the Master's degree, in MNS.\nWe poured months of our lives as well as our <3 into this project and we hope you'll like it :)"
+      },
+      "contactUs": {
+        "title": "Contact us",
+        "content": "clickify@agerard.dev"
+      },
+      "termsAndConditions": {
+        "privacyPolicy": {
+          "title": "Privacy policy",
+          "link": "|",
+          "cookiesPolicy": {
+            "title": "Cookies policy",
+            "link": "|"
+          }
+        },
+        "gotAtTop": "Go back at the top",
+        "bottom": {
+          "copyright": "©2023 Clickify",
+          "allRightsReserved": "All rights reserved"
+        }
+      }
+    }
+  }
+}

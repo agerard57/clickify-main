@@ -1,3 +1,4 @@
+import FullLogo from "./fullLogo.webp";
 import Logo from "./logo.webp";
 
-export { Logo };
+export { FullLogo, Logo };

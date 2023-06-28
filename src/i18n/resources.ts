@@ -1,4 +1,5 @@
-import { i18n as TestPage } from "@/testPage";
+import { i18n as LandingPage } from "@/landingPage";
+import { i18n as Core } from "@/core";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Modules = Record<string, { fr: any; en: any }>;
@@ -13,7 +14,8 @@ const normalize = (modules: Modules, formatNamespace: (name: string) => string =
   );
 
 const moduleResources = normalize({
-  TestPage,
+  Core,
+  LandingPage,
 });
 
 export const resources = {

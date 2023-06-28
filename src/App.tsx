@@ -1,13 +1,10 @@
-/** @jsxImportSource @emotion/react */
-import { FC, Suspense } from "react";
+import React, { FC, Suspense } from "react";
 
 import { ConstantsProvider } from "@/constants";
-import { Logo } from "@/core";
 import { i18n } from "@/i18n";
 import { LoadingScreen } from "@/loadingScreen";
 import { Router } from "@/router";
 import { theme } from "@/theme";
-import { css } from "@emotion/react";
 import { ThemeProvider } from "@mui/material";
 import { Toaster } from "react-hot-toast";
 import { I18nextProvider } from "react-i18next";
@@ -26,20 +23,7 @@ export const App: FC = () => (
           }}
         />
         <Suspense fallback={<LoadingScreen />}>
-          <div
-            css={css`
-              align-items: center;
-              display: flex;
-              flex-direction: column;
-              height: 100%;
-              position: absolute;
-              width: 100%;
-            `}
-          >
-            <h2>Clickify boilerplate</h2>
-            <img src={Logo} />
-            <Router />
-          </div>
+          <Router />
         </Suspense>
       </ThemeProvider>
     </ConstantsProvider>

@@ -1,26 +1,20 @@
-/** @jsxImportSource @emotion/react */
-import { FC } from "react";
-import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import React, { FC, useContext } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { ConstantsContext } from "@/constants";
+import { Layout } from "@/core";
 
-import { css } from "@emotion/react";
-import { TestPage } from "@/testPage";
+export const Router: FC = () => {
+  const appConstants = useContext(ConstantsContext);
 
-export const Router: FC = () => (
-  <BrowserRouter>
-    <nav
-      css={css`
-        margin: 20px;
-
-        * {
-          margin: 5px;
-        }
-      `}
-    >
-      <b>Routing: </b>
-      <Link to="/">Test route</Link>
-    </nav>
-    <Routes>
-      <Route path="/" element={<TestPage />} />
-    </Routes>
-  </BrowserRouter>
-);
+  return (
+    <BrowserRouter>
+      <Layout>
+        <Routes>
+          {Object.values(appConstants.routes).map((route) => (
+            <Route key={route.name} path={route.path} element={route.element} />
+          ))}
+        </Routes>
+      </Layout>
+    </BrowserRouter>
+  );
+};

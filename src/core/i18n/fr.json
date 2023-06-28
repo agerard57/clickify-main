@@ -1,0 +1,23 @@
+{
+  "sections": {
+    "welcome": "Bienvenue",
+    "product": "Produit",
+    "pricing": "Prix",
+    "about": "À propos",
+    "contact": "Nous contacter"
+  },
+  "loginButtons": {
+    "signOff": "Déconnexion",
+    "signUp": "S'inscrire",
+    "account": "Mon compte",
+    "login": "Se connecter"
+  },
+  "languages": {
+    "en": "EN",
+    "fr": "FR"
+  },
+  "tooltips": {
+    "dashboard": "Aller au dashboard ↗",
+    "docs": "Voir la documentation ↗"
+  }
+}
