@@ -47,6 +47,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@fullpage/react-fullpage": "^0.1.40",
     "@mui/material": "^5.13.3",
     "axios": "^1.4.0",
     "cypress": "12.5.0",
@@ -61,7 +62,6 @@
     "react-hot-toast": "^2.4.1",
     "react-i18next": "^12.3.1",
     "react-router-dom": "6.8.0",
-    "react-router-hash-link": "^2.4.3",
     "react-test-renderer": "^18.2.0"
   },
   "devDependencies": {

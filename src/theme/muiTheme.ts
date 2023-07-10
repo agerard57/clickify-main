@@ -24,8 +24,17 @@ export const muiTheme = {
           letterSpacing: "1px",
         },
         subtitle: {
+          fontSize: 20,
+          fontWeight: 400,
+        },
+        sentence: {
           fontSize: 16,
           fontWeight: 500,
+        },
+        paragraph: {
+          fontSize: 16,
+          fontWeight: 400,
+          lineHeight: "24px",
         },
       },
     },

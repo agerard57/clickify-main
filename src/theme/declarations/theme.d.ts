@@ -8,12 +8,16 @@ declare module "@mui/material/styles" {
     [TypographyVariants.INHERIT]: CSSProperties;
     [TypographyVariants.TITLE]: CSSProperties;
     [TypographyVariants.SUBTITLE]: CSSProperties;
+    [TypographyVariants.SENTENCE]: CSSProperties;
+    [TypographyVariants.PARAGRAPH]: CSSProperties;
   }
 
   interface TypographyVariantsOptions {
     [TypographyVariants.INHERIT]?: CSSProperties;
     [TypographyVariants.TITLE]?: CSSProperties;
     [TypographyVariants.SUBTITLE]?: CSSProperties;
+    [TypographyVariants.SENTENCE]?: CSSProperties;
+    [TypographyVariants.PARAGRAPH]?: CSSProperties;
   }
 }
 
@@ -22,6 +26,8 @@ declare module "@mui/material/Typography" {
     [TypographyVariants.INHERIT]: true;
     [TypographyVariants.TITLE]: true;
     [TypographyVariants.SUBTITLE]: true;
+    [TypographyVariants.SENTENCE]: true;
+    [TypographyVariants.PARAGRAPH]: true;
   }
 }
 

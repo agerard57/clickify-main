@@ -6,8 +6,8 @@
   "product": {
     "title": "Nous vous aidons à aider les autres !",
     "subTitle": "Grâce à notre aide, nous espérons guider votre activité / entreprise vers la réussite",
-    "sections": {
-      "unselected": {
+    "subSections": {
+      "0": {
         "content": {
           "1": "Clickify est une solution tout-en-un qui permet aux entreprises de gérer facilement leurs ventes en ligne. En quelques clics, vous pouvez mettre en place votre site de commerce électronique en un rien de temps. En fournissant une solution clé en main pour la numérisation, les entreprises peuvent offrir à leurs clients une expérience d'achat transparente et accessible, quels que soient les défis à relever. Avec Clickify, vous pouvez mettre votre entreprise en ligne et commencer à vendre à des clients du monde entier en toute simplicité",
           "2": "Nos outils puissants vous permettent de gérer les employés, les clients, les produits, les commandes et bien plus encore. Vous aurez accès à des tableaux de bord et à des rapports détaillés, qui vous fourniront les informations dont vous avez besoin pour optimiser votre activité en ligne et maximiser vos ventes",
@@ -16,7 +16,7 @@
       },
       "1": {
         "number": "1",
-        "title": "Créez votre compte",
+        "title": "Choisissez votre plan",
         "content": {
           "1": "Sélectionnez votre plan adapté à vos besoins !",
           "2": "Chez Clickify, nous comprenons que chaque entreprise est unique, avec des besoins et des budgets différents. C'est pourquoi nous proposons trois plans flexibles adaptés à vos besoins spécifiques, afin que vous puissiez choisir celui qui convient le mieux à votre activité en ligne. Que vous débutiez et ayez besoin de toutes les bases, ou que vous soyez un expert en commerce électronique cherchant à faire passer votre boutique au niveau supérieur, nous avons un plan pour vous"
@@ -39,50 +39,50 @@
           "2": "L'étape suivante consiste à ajouter vos produits à votre boutique en ligne ! Avec Clickify, c'est un jeu d'enfant de présenter vos produits et de mettre en valeur leurs caractéristiques uniques avec de superbes images, des descriptions détaillées et des prix compétitifs",
           "3": "Vous pouvez également créer des catégories et des étiquettes pour aider les clients à naviguer facilement et à trouver exactement ce qu'ils recherchent - en leur offrant une expérience d'achat à la fois facile et agréable. Et le meilleur ? C'est incroyablement rapide et facile à mettre en place, vous pouvez donc commencer à vendre en un rien de temps !",
           "4": "Et voilà ! En quelques étapes simples, votre site de commerce électronique est maintenant opérationnel !"
-        },
-        "more": "Consultez nos tarifs..."
-      }
-    },
-    "pricing": {
-      "title": "Prêt à créer votre boutique ? Choisissez votre formule !",
-      "subTitle": "Nous proposons 3 plans qui vous donneront les outils nécessaires pour commencer votre aventure !",
-      "planComponent": {
-        "popular": "Choix populaire",
-        "features": "Caractéristiques ",
-        "currency": "$",
-        "month": "mois",
-        "more": "...et toutes les autres fonctionnalités des plans précédents"
+        }
       },
-      "plans": {
-        "basic": {
-          "title": "Basique",
-          "description": "Tout ce qui est nécessaire pour démarrer votre boutique, gérer vos produits et traiter les paiements",
-          "features": {
-            "1": "Taxes : 1,8% + 0,20$ par achat",
-            "2": "Jusqu'à 100 produits",
-            "3": "2 Comptes d'employés"
-          }
-        },
-        "clickify": {
-          "title": "Clickify",
-          "description": "Faites passer votre boutique au niveau supérieur avec des rapports avancés, des frais de transaction réduits et plus de comptes de personnel",
-          "features": {
-            "1": "Taxes : 1,6% + 0,20$ par achat",
-            "2": "Jusqu'à 500 produits",
-            "3": "5 comptes d'employés",
-            "4": "Rapports avancés",
-            "5": "Ajouter plusieurs magasins"
-          }
-        },
-        "premium": {
-          "title": "Premium",
-          "description": "Obtenez le meilleur de Clickify grâce aux avantages précédents, ainsi que plus de comptes de personnel et des frais de transaction encore plus bas",
-          "features": {
-            "1": "Taxes : 1,4% + 0,20 $ par achat",
-            "2": "Jusqu'à 1000 produits",
-            "3": "10 comptes d'employés",
-            "4": "Support client in-app"
-          }
+      "more": "Consultez nos tarifs..."
+    }
+  },
+  "pricing": {
+    "title": "Prêt à créer votre boutique ? Choisissez votre formule !",
+    "subTitle": "Nous proposons 3 plans qui vous donneront les outils nécessaires pour commencer votre aventure !",
+    "planComponent": {
+      "popular": "Choix populaire",
+      "features": "Caractéristiques ",
+      "currency": "$",
+      "month": "mois",
+      "more": "...et toutes les autres fonctionnalités des plans précédents"
+    },
+    "plans": {
+      "basic": {
+        "title": "Basique",
+        "description": "Tout ce qui est nécessaire pour démarrer votre boutique, gérer vos produits et traiter les paiements",
+        "features": {
+          "1": "Taxes : 1,8% + 0,20$ par achat",
+          "2": "Jusqu'à 100 produits",
+          "3": "2 Comptes d'employés"
+        }
+      },
+      "clickify": {
+        "title": "Clickify",
+        "description": "Faites passer votre boutique au niveau supérieur avec des rapports avancés, des frais de transaction réduits et plus de comptes de personnel",
+        "features": {
+          "1": "Taxes : 1,6% + 0,20$ par achat",
+          "2": "Jusqu'à 500 produits",
+          "3": "5 comptes d'employés",
+          "4": "Rapports avancés",
+          "5": "Ajouter plusieurs magasins"
+        }
+      },
+      "premium": {
+        "title": "Premium",
+        "description": "Obtenez le meilleur de Clickify grâce aux avantages précédents, ainsi que plus de comptes de personnel et des frais de transaction encore plus bas",
+        "features": {
+          "1": "Taxes : 1,4% + 0,20 $ par achat",
+          "2": "Jusqu'à 1000 produits",
+          "3": "10 comptes d'employés",
+          "4": "Support client in-app"
         }
       }
     },

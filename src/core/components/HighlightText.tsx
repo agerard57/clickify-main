@@ -1,14 +1,16 @@
 import styled from "@emotion/styled";
 import { Typography, useTheme } from "@mui/material";
-import React from "react";
+import React, { Fragment } from "react";
 import { TypographyVariants } from "@/theme";
 
 export const HighlightText = ({
   text,
   textVariant = TypographyVariants.INHERIT,
+  highlightAllText = false,
 }: {
   text: string;
   textVariant: TypographyVariants;
+  highlightAllText?: boolean;
 }) => {
   const theme = useTheme();
 
@@ -29,13 +31,13 @@ export const HighlightText = ({
   return (
     <RegularTypography variant={textVariant}>
       {parts.map((part, index) => {
-        if (index % 2 === 0) {
-          return part;
-        }
+        const shouldHighlight = highlightAllText || index % 2 !== 0;
+        const Component = shouldHighlight ? HighlightedTypography : Fragment;
+
         return (
-          <HighlightedTypography key={index} variant={textVariant}>
+          <Component key={index} variant={textVariant}>
             {part}
-          </HighlightedTypography>
+          </Component>
         );
       })}
     </RegularTypography>

@@ -1,62 +1,57 @@
-import styled from "@emotion/styled";
-import React, { FC } from "react";
-import { useTranslation } from "react-i18next";
-import { HighlightText } from "@/core";
-import { TypographyVariants } from "@/theme";
-import { IconButton, Typography, useTheme } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleDown } from "@fortawesome/free-solid-svg-icons";
-import { LandingPageImage } from "../assets";
+import ReactFullpage from "@fullpage/react-fullpage";
+import React, { FC, useEffect, useRef } from "react";
+import { useLandingPage } from "../hooks";
+import { Section } from "../typings";
+import { EmptySection } from "./EmptySection";
 
 export const LandingPage: FC = () => {
-  const { t } = useTranslation("LandingPage");
-  const theme = useTheme();
+  const sections = useLandingPage();
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  // TODO: Fix this any
+  const fullpageApiRef = useRef<any>(null);
 
-  const LandingPageWrapper = styled.div`
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: absolute;
-    width: 100%;
-    height: -webkit-fill-available;
-  `;
+  useEffect(() => {
+    const handleHashChange = () => {
+      const { hash } = window.location;
+      fullpageApiRef.current.moveTo(hash);
+    };
 
-  const WelcomeContent = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 40px;
-  `;
+    window.addEventListener("hashchange", handleHashChange);
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
 
-  const Image = styled.img`
-    height: 400px;
-    margin-top: 50px;
-  `;
-
-  const BottomWrapper = styled.div`
-    position: absolute;
-    bottom: 40px;
-    display: flex;
-    flex-direction: column;
-  `;
-
-  const Icon = styled(FontAwesomeIcon)`
-    height: 25px;
-    margin-top: 15px;
-    color: ${theme.app.landingPage.icon};
-  `;
+  useEffect(() => {
+    // Add case where if the hash is not in Section, then redirect to welcome
+    // It ain't working that much tbh
+    if (
+      window.location.hash === "" ||
+      !Object.values(Section).includes(window.location.hash.replace("#", "") as Section)
+    ) {
+      window.location.hash = "#welcome";
+    }
+  }, []);
 
   return (
-    <LandingPageWrapper>
-      <WelcomeContent>
-        <HighlightText textVariant={TypographyVariants.TITLE} text={t("welcome.title")} />
-        <Image src={LandingPageImage} />
-      </WelcomeContent>
-      <BottomWrapper>
-        <Typography variant={TypographyVariants.SUBTITLE}>{t("welcome.more")}</Typography>
-        <Icon icon={faCircleDown} />
-      </BottomWrapper>
-    </LandingPageWrapper>
+    <ReactFullpage
+      licenseKey="gplv3-license"
+      credits={{ enabled: false }}
+      anchors={Object.values(Section)}
+      scrollingSpeed={1000}
+      render={({ fullpageApi }) => {
+        fullpageApiRef.current = fullpageApi;
+
+        return (
+          <ReactFullpage.Wrapper>
+            {sections.map((section, index) => (
+              <div className="section" key={index} style={{ padding: "0 3%" }}>
+                <EmptySection sectionSpec={section} onClick={() => fullpageApi.moveSectionDown()} />
+              </div>
+            ))}
+          </ReactFullpage.Wrapper>
+        );
+      }}
+    />
   );
 };

@@ -1,3 +1,5 @@
 {
-  "cSpell.words": ["Clickify"]
+  "cSpell.words": ["Clickify", "Fullpage"],
+  "i18n-ally.localesPaths": ["src/i18n", "src/core/i18n", "src/landingPage/i18n"],
+  "i18n-ally.keystyle": "nested"
 }

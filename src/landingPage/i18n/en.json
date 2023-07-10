@@ -6,17 +6,10 @@
   "product": {
     "title": "We help you helping others!",
     "subTitle": "Thanks to our help, we hope to guide your business / enterprise into fruition",
-    "sections": {
-      "unselected": {
-        "content": {
-          "1": "Clickify is an all-in-one solution that allows businesses to manage their online sales easily. With just a few clicks, you can have your e-commerce site up and running in no time. By providing a turnkey solution for digitalization, businesses can offer their customers a seamless and accessible shopping experience, no matter what challenges arise. With Clickify, you can take your business online and start selling to customers all over the world with ease",
-          "2": "Our powerful tools enable you to manage employees, customers, products, orders, and more. You'll have access to dashboards and detailed reports, providing you with the insights you need to optimize your online business and maximize your sales",
-          "3": "Clickify is the perfect platform to take your business to the next level, whether you're just starting out or looking to scale"
-        }
-      },
+    "subSections": {
       "1": {
         "number": "1",
-        "title": "Create your account",
+        "title": "Choose your plan",
         "content": {
           "1": "Select your plan tailored to your needs!",
           "2": "At Clickify, we understand that every business is unique, with different needs and budgets. That's why we offer three flexible plans tailored to suit your specific requirements, so you can choose the one that best fits your online business. Whether you're just starting out and need all the basics covered, or you're an e-commerce expert looking to take your store to the next level, we have a plan for you"
@@ -39,50 +32,57 @@
           "2": "The next step is to add your products to your online store! With Clickify, it's a breeze to showcase your products and highlight their unique features with stunning images, detailed descriptions, and competitive pricing",
           "3": "You can also create categories and tags to help customers easily navigate and find exactly what they're looking for - giving them a shopping experience that's both easy and enjoyable. And the best part? It's incredibly quick and easy to set up, so you can start selling in no time!",
           "4": "And there you have it! In just a few simple steps, your e-commerce site is now up and running!"
-        },
-        "more": "Check out our pricing..."
+        }
+      },
+      "0": {
+        "content": {
+          "1": "Clickify is an all-in-one solution that allows businesses to manage their online sales easily. With just a few clicks, you can have your e-commerce site up and running in no time. By providing a turnkey solution for digitalization, businesses can offer their customers a seamless and accessible shopping experience, no matter what challenges arise. With Clickify, you can take your business online and start selling to customers all over the world with ease",
+          "2": "Our powerful tools enable you to manage employees, customers, products, orders, and more. You'll have access to dashboards and detailed reports, providing you with the insights you need to optimize your online business and maximize your sales",
+          "3": "Clickify is the perfect platform to take your business to the next level, whether you're just starting out or looking to scale"
+        }
       }
     },
-    "pricing": {
-      "title": "Ready to set up your store? Pick your plan!",
-      "subTitle": "We offer 3 plans that will give you the necessary tools to begin your adventure!",
-      "planComponent": {
-        "popular": "Popular choice",
-        "features": "Features",
-        "currency": "$",
-        "month": "month",
-        "more": "...and all the features from the previous tiers"
+    "more": "Check out our pricing..."
+  },
+  "pricing": {
+    "title": "Ready to set up your store? Pick your plan!",
+    "subTitle": "We offer 3 plans that will give you the necessary tools to begin your adventure!",
+    "planComponent": {
+      "popular": "Popular choice",
+      "features": "Features",
+      "currency": "$",
+      "month": "month",
+      "more": "...and all the features from the previous tiers"
+    },
+    "plans": {
+      "basic": {
+        "title": "Basic",
+        "description": "Everything needed to kick start your store, manage your products and process payments",
+        "features": {
+          "1": "Taxes : 1,8% + $0,20 per purchase",
+          "2": "Up until 100 products",
+          "3": "2 Employees accounts"
+        }
       },
-      "plans": {
-        "basic": {
-          "title": "Basic",
-          "description": "Everything needed to kick start your store, manage your products and process payments",
-          "features": {
-            "1": "Taxes : 1,8% + $0,20 per purchase",
-            "2": "Up until 100 products",
-            "3": "2 Employees accounts"
-          }
-        },
-        "clickify": {
-          "title": "Clickify",
-          "description": "Take your shop to the next level with advanced reporting, lower transactions fees and more staff accounts",
-          "features": {
-            "1": "Taxes : 1,6% + $0,20 per purchase",
-            "2": "Up until 500 products",
-            "3": "5 Employees accounts",
-            "4": "Advanced reporting",
-            "5": "Add multiple stores"
-          }
-        },
-        "premium": {
-          "title": "Premium",
-          "description": "Get the best of Clickify thanks to the previous advantages, as well as more staff accounts and even lower transactions fees",
-          "features": {
-            "1": "Taxes : 1,4% + $0,20 per purchase",
-            "2": "Up until 1000 products",
-            "3": "10 Employees accounts",
-            "4": "In-app customer support"
-          }
+      "clickify": {
+        "title": "Clickify",
+        "description": "Take your shop to the next level with advanced reporting, lower transactions fees and more staff accounts",
+        "features": {
+          "1": "Taxes : 1,6% + $0,20 per purchase",
+          "2": "Up until 500 products",
+          "3": "5 Employees accounts",
+          "4": "Advanced reporting",
+          "5": "Add multiple stores"
+        }
+      },
+      "premium": {
+        "title": "Premium",
+        "description": "Get the best of Clickify thanks to the previous advantages, as well as more staff accounts and even lower transactions fees",
+        "features": {
+          "1": "Taxes : 1,4% + $0,20 per purchase",
+          "2": "Up until 1000 products",
+          "3": "10 Employees accounts",
+          "4": "In-app customer support"
         }
       }
     },
