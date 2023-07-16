@@ -1,4 +1,4 @@
 export * as i18n from "./i18n";
 
 export { LandingPage } from "./components";
-export { Section } from "./typings";
+export { Sections } from "./typings";

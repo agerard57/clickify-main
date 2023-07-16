@@ -1,37 +1,35 @@
 import React from "react";
-import { useTranslation } from "react-i18next";
 import { ProductSection, WelcomeSection } from "../components";
-import { Section, SectionSpec } from "../typings";
+import { Sections, SectionSpec } from "../typings";
 
-export const useLandingPage = (): SectionSpec[] => {
-  const { t } = useTranslation("LandingPage");
-
+export const useLandingPage = (): { sections: SectionSpec[] } => {
   const sections: SectionSpec[] = [
     {
-      name: Section.WELCOME,
+      name: Sections.WELCOME,
       sectionContent: <WelcomeSection />,
       nextSectionText: true,
     },
     {
-      name: Section.PRODUCT,
+      name: Sections.PRODUCT,
       sectionContent: <ProductSection />,
       nextSectionText: true,
     },
     {
-      name: Section.PRICING,
+      name: Sections.PRICING,
       sectionContent: <ProductSection />,
       nextSectionText: true,
     },
     {
-      name: Section.ABOUT,
+      name: Sections.ABOUT,
       sectionContent: <ProductSection />,
       nextSectionText: true,
     },
     {
-      name: Section.CONTACT,
+      name: Sections.CONTACT,
       sectionContent: <ProductSection />,
       nextSectionText: false,
     },
   ];
-  return sections;
+
+  return { sections };
 };

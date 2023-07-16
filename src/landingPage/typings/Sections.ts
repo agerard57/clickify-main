@@ -1,4 +1,4 @@
-export enum Section {
+export enum Sections {
   WELCOME = "welcome",
   PRODUCT = "product",
   PRICING = "pricing",

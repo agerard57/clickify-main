@@ -1,7 +1,7 @@
-import { Section } from "./Section";
+import { Sections } from "./Sections";
 
 export interface SectionSpec {
-  name: Section;
+  name: Sections;
   sectionContent: JSX.Element;
   nextSectionText: boolean;
 }

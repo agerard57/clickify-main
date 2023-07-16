@@ -1,11 +1,11 @@
 import ReactFullpage from "@fullpage/react-fullpage";
 import React, { FC, useEffect, useRef } from "react";
 import { useLandingPage } from "../hooks";
-import { Section } from "../typings";
+import { Sections } from "../typings";
 import { EmptySection } from "./EmptySection";
 
 export const LandingPage: FC = () => {
-  const sections = useLandingPage();
+  const { sections } = useLandingPage();
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   // TODO: Fix this any
   const fullpageApiRef = useRef<any>(null);
@@ -27,7 +27,7 @@ export const LandingPage: FC = () => {
     // It ain't working that much tbh
     if (
       window.location.hash === "" ||
-      !Object.values(Section).includes(window.location.hash.replace("#", "") as Section)
+      !Object.values(Sections).includes(window.location.hash.replace("#", "") as Sections)
     ) {
       window.location.hash = "#welcome";
     }
@@ -37,7 +37,7 @@ export const LandingPage: FC = () => {
     <ReactFullpage
       licenseKey="gplv3-license"
       credits={{ enabled: false }}
-      anchors={Object.values(Section)}
+      anchors={Object.values(Sections)}
       scrollingSpeed={1000}
       render={({ fullpageApi }) => {
         fullpageApiRef.current = fullpageApi;

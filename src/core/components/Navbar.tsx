@@ -6,7 +6,7 @@ import { Page } from "@/router";
 import { ConstantsContext } from "@/constants";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
-import { Section } from "@/landingPage";
+import { Sections } from "@/landingPage";
 import { Link, useLocation } from "react-router-dom";
 import { FullLogo } from "../assets";
 
@@ -18,7 +18,7 @@ export const Navbar: FC = () => {
   const appConstants = useContext(ConstantsContext);
   const route = appConstants.routes[Page.LANDING_PAGE];
 
-  const [currentSection, setCurrentSection] = useState<Section | null>(null);
+  const [currentSection, setCurrentSection] = useState<Sections | null>(null);
 
   const HeaderWrapper = styled(Toolbar)`
     position: fixed;
@@ -56,7 +56,7 @@ export const Navbar: FC = () => {
       const { hash } = window.location;
       const { pathname } = location;
       // Also add types
-      setCurrentSection(pathname !== "/" ? null : (hash.replace("#", "") as Section));
+      setCurrentSection(pathname !== "/" ? null : (hash.replace("#", "") as Sections));
     };
 
     window.addEventListener("hashchange", handleHashChange);
@@ -66,13 +66,13 @@ export const Navbar: FC = () => {
       window.removeEventListener("hashchange", handleHashChange);
     };
   }, []);
-  console.log(currentSection);
+
   return (
     <>
       <HeaderWrapper>
         <Logo src={FullLogo} alt="logo" />
         <NavBarWrapper>
-          {route.sections.map((section: Section) => (
+          {route.sections.map((section: Sections) => (
             <Link reloadDocument key={section} to={`/#${section}`}>
               <Typography fontWeight={currentSection === section ? 700 : 500}>{t(`sections.${section}`)}</Typography>
             </Link>

@@ -32,12 +32,13 @@ export const HighlightText = ({
     <RegularTypography variant={textVariant}>
       {parts.map((part, index) => {
         const shouldHighlight = highlightAllText || index % 2 !== 0;
-        const Component = shouldHighlight ? HighlightedTypography : Fragment;
 
-        return (
-          <Component key={index} variant={textVariant}>
+        return shouldHighlight ? (
+          <HighlightedTypography key={index} variant={textVariant}>
             {part}
-          </Component>
+          </HighlightedTypography>
+        ) : (
+          <Fragment key={index}>{part}</Fragment>
         );
       })}
     </RegularTypography>
