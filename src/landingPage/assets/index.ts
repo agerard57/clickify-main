@@ -1,1 +1,1 @@
-export { LandingPageImage, productImages } from "./images";
+export { LandingPageImage, productImages, aboutImages } from "./images";

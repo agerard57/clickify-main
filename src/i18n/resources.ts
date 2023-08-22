@@ -2,8 +2,7 @@ import { i18n as LandingPage } from "@/landingPage";
 import { i18n as Core } from "@/core";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-type Modules = Record<string, { fr: any; en: any }>;
-
+type Modules = Record<string, { fr: Record<string, any>; en: Record<string, any> }>;
 const normalize = (modules: Modules, formatNamespace: (name: string) => string = (name) => name) =>
   Object.entries(modules).reduce(
     ({ fr, en }, [namespace, translations]) => ({

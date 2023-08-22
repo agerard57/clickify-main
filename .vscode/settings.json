@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["Clickify", "Fullpage"],
+  "cSpell.words": ["Clickify", "Fullpage", "Lexend"],
   "i18n-ally.localesPaths": ["src/i18n", "src/core/i18n", "src/landingPage/i18n"],
   "i18n-ally.keystyle": "nested"
 }

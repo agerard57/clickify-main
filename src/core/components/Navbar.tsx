@@ -1,24 +1,32 @@
-import styled from "@emotion/styled";
-import { Button, Toolbar, Typography, useTheme } from "@mui/material";
 import React, { FC, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { Page } from "@/router";
-import { ConstantsContext } from "@/constants";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBook } from "@fortawesome/free-solid-svg-icons";
-import { Sections } from "@/landingPage";
 import { Link, useLocation } from "react-router-dom";
+
+import { ConstantsContext } from "@/constants";
+import { Sections } from "@/landingPage";
+import { LanguageCode, useLanguage } from "@/language";
+import { Page } from "@/router";
+import { ButtonVariants } from "@/theme";
+import styled from "@emotion/styled";
+import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Toolbar, Tooltip, Typography, useTheme } from "@mui/material";
+
 import { FullLogo } from "../assets";
 
 export const Navbar: FC = () => {
   const { t } = useTranslation("Core");
   const theme = useTheme();
   const location = useLocation();
+  const language = useLanguage();
 
   const appConstants = useContext(ConstantsContext);
   const route = appConstants.routes[Page.LANDING_PAGE];
 
   const [currentSection, setCurrentSection] = useState<Sections | null>(null);
+
+  const onLanguageClick = () =>
+    language.change(language.language === LanguageCode.EN ? LanguageCode.FR : LanguageCode.EN);
 
   const HeaderWrapper = styled(Toolbar)`
     position: fixed;
@@ -79,9 +87,16 @@ export const Navbar: FC = () => {
           ))}
         </NavBarWrapper>
         <ButtonsWrapper>
-          <Typography>Sign up</Typography>
-          <Button>Login</Button>
-          <FontAwesomeIcon icon={faBook} />
+          <Button variant={ButtonVariants.TEXT}>{t("loginButtons.signUp")}</Button>
+          <Button variant={ButtonVariants.PRIMARY}>{t("loginButtons.login")}</Button>
+          <Button variant={ButtonVariants.TEXT}>
+            <FontAwesomeIcon icon={faBook} />
+          </Button>
+          <Tooltip title={t("languages.switch")} arrow placement="bottom-start">
+            <Button variant={ButtonVariants.TEXT} onClick={onLanguageClick}>
+              {t("languages.current")}
+            </Button>
+          </Tooltip>
         </ButtonsWrapper>
       </HeaderWrapper>
     </>
