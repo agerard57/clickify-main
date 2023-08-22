@@ -1,9 +1,11 @@
+import React, { FC, useContext } from "react";
+import { useTranslation } from "react-i18next";
+
 import { ConstantsContext } from "@/constants";
 import { TypographyVariants } from "@/theme";
 import styled from "@emotion/styled";
 import { Typography } from "@mui/material";
-import React, { FC, useContext } from "react";
-import { useTranslation } from "react-i18next";
+
 import { Category } from "./Categories";
 
 export const ContactSection: FC = () => {

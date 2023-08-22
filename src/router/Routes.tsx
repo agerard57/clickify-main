@@ -1,5 +1,7 @@
 import React from "react";
-import { LandingPage } from "@/landingPage";
+// Webpack fails here
+// eslint-disable-next-line import/no-internal-modules
+import { LandingPage } from "@/landingPage/components/LandingPage";
 import { Page, Routes } from "./interfaces";
 
 export const routes: Routes = {

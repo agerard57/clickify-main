@@ -4,59 +4,10 @@ import { useTranslation } from "react-i18next";
 import { HighlightText } from "@/core";
 import { TypographyVariants } from "@/theme";
 import styled from "@emotion/styled";
-import { css, Typography, useTheme } from "@mui/material";
+import { css, useTheme } from "@mui/material";
 
 import { ConstantsContext } from "@/constants";
 import { AboutSubSections } from "../../../typings";
-
-interface SubSectionChoiceElementProps {
-  item: AboutSubSections;
-  isSelected: boolean;
-  setCurrentSubSection: Dispatch<SetStateAction<AboutSubSections>>;
-}
-
-const SubSectionChoiceElement: FC<SubSectionChoiceElementProps> = ({ item, isSelected, setCurrentSubSection }) => {
-  const { t } = useTranslation("LandingPage");
-  const theme = useTheme();
-
-  const onClick = () => setCurrentSubSection(item);
-
-  const SubSectionChoice = styled.div`
-    cursor: pointer;
-    user-select: none;
-    padding: 10px 0;
-  `;
-
-  const SubSectionChoiceTextNumber = styled(Typography)`
-    color: ${theme.app.landingPage.sections.about[isSelected ? "selected" : "notSelected"]};
-    padding: 10px 0;
-  `;
-
-  const SubSectionChoiceTextTitle = styled(HighlightText)`
-    padding: 100px 0;
-  `;
-
-  const SubSectionChoiceHorizontalSeparator = styled.div`
-    width: 10%;
-    height: 1px;
-    margin: 10px 0;
-    background-color: ${theme.app.landingPage.sections.about[isSelected ? "selected" : "notSelected"]};
-  `;
-
-  return (
-    <SubSectionChoice onClick={onClick}>
-      <SubSectionChoiceTextNumber variant={TypographyVariants.TITLE}>
-        {t(`about.subSections.${item}.number`)}
-      </SubSectionChoiceTextNumber>
-      <SubSectionChoiceHorizontalSeparator />
-      <SubSectionChoiceTextTitle
-        textVariant={TypographyVariants.SUBTITLE}
-        text={t(`about.subSections.${item}.title`)}
-        highlightAllText={isSelected}
-      />
-    </SubSectionChoice>
-  );
-};
 
 interface SubSectionChoicesProps {
   currentSubSection: AboutSubSections;

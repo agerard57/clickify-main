@@ -1,18 +1,19 @@
-import React, { FC, Key } from "react";
+import React, { FC } from "react";
+import { useTranslation } from "react-i18next";
+
 import { ButtonVariants, TypographyVariants } from "@/theme";
 import styled from "@emotion/styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Typography, Button, useTheme } from "@mui/material";
-import { useTranslation } from "react-i18next";
+import { Button, Typography, useTheme } from "@mui/material";
+
 import { CardContentProps } from "../../../typings";
 
 interface CardProps {
   sectionTitle: string;
   cardContent: CardContentProps;
-  key: Key;
 }
 
-export const Card: FC<CardProps> = ({ sectionTitle, cardContent, key }) => {
+export const Card: FC<CardProps> = ({ sectionTitle, cardContent }) => {
   const { t } = useTranslation("LandingPage");
   const theme = useTheme();
 
@@ -36,7 +37,7 @@ export const Card: FC<CardProps> = ({ sectionTitle, cardContent, key }) => {
     gap: 30px;
     flex-direction: column;
 
-    & > :first-child {
+    & > :first-of-type {
       text-align: center;
     }
   `;
@@ -51,7 +52,7 @@ export const Card: FC<CardProps> = ({ sectionTitle, cardContent, key }) => {
   const translationKeyPrefix = `${sectionTitle}.cards.${cardContent.title}`;
 
   return (
-    <CardContainer key={key}>
+    <CardContainer>
       <CardContent>
         <Typography variant={TypographyVariants.SUBTITLE}>{t(`${translationKeyPrefix}.title`)}</Typography>
         <CardIcon icon={cardContent.icon} />

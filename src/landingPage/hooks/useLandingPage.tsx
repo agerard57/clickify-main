@@ -2,7 +2,7 @@ import React, { MutableRefObject, useEffect, useRef } from "react";
 
 import { fullpageApi as FullpageApi } from "@fullpage/react-fullpage";
 
-import { AboutSection, ProductSection, WelcomeSection, PricingSection, ContactSection } from "../components";
+import { AboutSection, ContactSection, PricingSection, ProductSection, WelcomeSection } from "../components";
 import { Sections, SectionSpec } from "../typings";
 
 interface UseLandingPage {
@@ -60,7 +60,7 @@ export const useLandingPage = (): UseLandingPage => {
       window.location.hash === "" ||
       !Object.values(Sections).includes(window.location.hash.replace("#", "") as Sections)
     ) {
-      window.location.hash = "#welcome";
+      window.location.hash = `#${Sections.WELCOME}`;
     }
   }, []);
 

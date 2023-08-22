@@ -1,8 +1,10 @@
-import React, { FC, Key } from "react";
+import React, { FC } from "react";
+import { useTranslation } from "react-i18next";
+
 import { TypographyVariants } from "@/theme";
 import styled from "@emotion/styled";
 import { Typography } from "@mui/material";
-import { useTranslation } from "react-i18next";
+
 import { ContactCategory } from "../../../typings";
 import { Card } from "./Card";
 
@@ -19,17 +21,16 @@ const Cards = styled.div`
 `;
 
 interface CategoryProps {
-  key: Key;
   section: ContactCategory;
 }
 
-export const Category: FC<CategoryProps> = ({ section, key }) => {
+export const Category: FC<CategoryProps> = ({ section }) => {
   const { t } = useTranslation("LandingPage");
 
   const translationKeyPrefix = `contact.categories.${section.title}`;
 
   return (
-    <CategoryContainer key={key}>
+    <CategoryContainer>
       <Typography variant={TypographyVariants.SECTION_TITLE}>{t(`${translationKeyPrefix}.title`)}</Typography>
       <Cards>
         {section.cards.map((cardContent, cardIndex) => (
