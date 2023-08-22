@@ -6,22 +6,23 @@ import { TypographyVariants } from "@/theme";
 import { productImages } from "../../../../assets";
 import { styles } from "../../../../styles";
 
-export const UnselectedSubSectionChoice: FC = () => {
+export const ThirdSubSectionChoice: FC = () => {
   const { t } = useTranslation("LandingPage");
 
-  const { ParagraphImage, ParagraphText, ParagraphWrapper } = styles.productSection();
+  const { ParagraphImage, ParagraphText, ParagraphWrapper, SectionTitle } = styles.productSection();
 
   return (
     <>
-      {([1, 2, 3] as const).map((item) => {
+      <SectionTitle variant={TypographyVariants.SECTION_TITLE}>{t("product.subSections.3.content.1")}</SectionTitle>
+      {([1, 2] as const).map((item) => {
         const isEven = item % 2 === 0;
 
         return (
           <ParagraphWrapper key={item}>
             <ParagraphText variant={TypographyVariants.PARAGRAPH} isEven={isEven}>
-              {t(`product.subSections.0.content.${item}`)}
+              {t(`product.subSections.3.content.${item + 1}`)}
             </ParagraphText>
-            <ParagraphImage src={productImages[0][item]} isEven={isEven} />
+            <ParagraphImage src={productImages[3][item]} isEven={isEven} />
           </ParagraphWrapper>
         );
       })}

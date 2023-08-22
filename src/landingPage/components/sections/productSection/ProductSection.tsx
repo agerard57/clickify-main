@@ -1,7 +1,9 @@
-import styled from "@emotion/styled";
 import React, { FC } from "react";
+
+import styled from "@emotion/styled";
+
 import { ProductSubSections } from "../../../typings";
-import { SubSectionContent } from "./SubSectionContent";
+import { SubSectionContents } from "./SubSectionContents";
 import { SubSectionChoices } from "./SubSectionsChoices";
 
 export const ProductSection: FC = () => {
@@ -13,12 +15,13 @@ export const ProductSection: FC = () => {
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    height: 60vh;
   `;
 
   return (
     <ProductSectionWrapper>
       <SubSectionChoices currentSubSection={currentSubSection} setCurrentSubSection={setCurrentSubSection} />
-      <SubSectionContent currentSubSection={currentSubSection} />
+      <SubSectionContents currentSubSection={currentSubSection} />
     </ProductSectionWrapper>
   );
 };

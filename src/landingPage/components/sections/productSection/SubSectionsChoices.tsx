@@ -1,9 +1,11 @@
-import styled from "@emotion/styled";
 import React, { Dispatch, FC, SetStateAction } from "react";
 import { useTranslation } from "react-i18next";
-import { useTheme, Typography } from "@mui/material";
+
 import { HighlightText } from "@/core";
 import { TypographyVariants } from "@/theme";
+import styled from "@emotion/styled";
+import { Typography, useTheme } from "@mui/material";
+
 import { ProductSubSections } from "../../../typings";
 
 interface SubSectionChoiceElementProps {
