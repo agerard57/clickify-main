@@ -1,10 +1,12 @@
-import styled from "@emotion/styled";
 import React, { FC } from "react";
-import { Typography, useTheme } from "@mui/material";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleDown } from "@fortawesome/free-solid-svg-icons";
 import { useTranslation } from "react-i18next";
+
 import { TypographyVariants } from "@/theme";
+import styled from "@emotion/styled";
+import { faCircleDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Typography, useTheme } from "@mui/material";
+
 import { SectionSpec } from "../typings";
 
 interface Props {

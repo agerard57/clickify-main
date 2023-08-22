@@ -1,8 +1,10 @@
 import React, { FC } from "react";
 import { useTranslation } from "react-i18next";
+
 import { HighlightText } from "@/core";
 import { TypographyVariants } from "@/theme";
 import styled from "@emotion/styled";
+
 import { LandingPageImage } from "../../assets";
 
 export const WelcomeSection: FC = () => {

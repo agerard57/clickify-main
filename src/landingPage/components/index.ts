@@ -1,2 +1,2 @@
-export { ProductSection, WelcomeSection } from "./sections";
+export { AboutSection, ProductSection, WelcomeSection, PricingSection, ContactSection } from "./sections";
 export { LandingPage } from "./LandingPage";

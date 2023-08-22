@@ -1,37 +1,13 @@
+import React, { FC } from "react";
+
 import ReactFullpage from "@fullpage/react-fullpage";
-import React, { FC, useEffect, useRef } from "react";
+
 import { useLandingPage } from "../hooks";
 import { Sections } from "../typings";
 import { EmptySection } from "./EmptySection";
 
 export const LandingPage: FC = () => {
-  const { sections } = useLandingPage();
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  // TODO: Fix this any
-  const fullpageApiRef = useRef<any>(null);
-
-  useEffect(() => {
-    const handleHashChange = () => {
-      const { hash } = window.location;
-      fullpageApiRef.current.moveTo(hash);
-    };
-
-    window.addEventListener("hashchange", handleHashChange);
-    return () => {
-      window.removeEventListener("hashchange", handleHashChange);
-    };
-  }, []);
-
-  useEffect(() => {
-    // Add case where if the hash is not in Section, then redirect to welcome
-    // It ain't working that much tbh
-    if (
-      window.location.hash === "" ||
-      !Object.values(Sections).includes(window.location.hash.replace("#", "") as Sections)
-    ) {
-      window.location.hash = "#welcome";
-    }
-  }, []);
+  const { sections, fullpageApiRef } = useLandingPage();
 
   return (
     <ReactFullpage
