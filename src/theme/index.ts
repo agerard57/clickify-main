@@ -1,2 +1,2 @@
 export { theme } from "./themeBuilder";
-export { TypographyVariants } from "./typings";
+export { ButtonVariants, TypographyVariants } from "./typings";

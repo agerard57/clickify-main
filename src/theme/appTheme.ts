@@ -11,9 +11,22 @@ export const appTheme = {
     landingPage: {
       icon: colorPalette.blue,
       sections: {
+        about: {
+          selected: colorPalette.primaryBlack,
+          notSelected: {
+            highlighted: colorPalette.lightGrey,
+            notHighlighted: colorPalette.grey,
+          },
+        },
         product: {
           selected: colorPalette.primaryBlack,
           notSelected: colorPalette.grey,
+        },
+        contact: {
+          cardBackground: colorPalette.white,
+          cardBorder: `1px solid ${colorPalette.lightGrey}`,
+          iconColor: colorPalette.blue,
+          boxShadow: "0px 0px 14px -3px rgba(0, 0, 0, 0.25)",
         },
       },
     },

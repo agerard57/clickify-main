@@ -6,13 +6,18 @@ export type DefaultTypographyPropsVariants = {
   [key in Variant]: false;
 };
 
-// This is the list of all the variants that we want to use in our app.
-// If you want to add a new variant, you have to add it here and in the
-// theme.d.ts file before setting the styleOverrides in muiTheme.ts
+/** This is the list of all the variants that we want to use in our app.
+ * If you want to add a new variant, you have to add it here and in the
+ * typography.d.ts file before setting the styleOverrides in muiTheme.ts
+ */
+
 export enum TypographyVariants {
   INHERIT = "inherit",
   TITLE = "title",
   SUBTITLE = "subtitle",
+  SECTION_TITLE = "sectionTitle",
   SENTENCE = "sentence",
   PARAGRAPH = "paragraph",
+  SMALL_TEXT = "smallText",
+  PARAGRAPH_TITLE = "paragraphTitle",
 }
