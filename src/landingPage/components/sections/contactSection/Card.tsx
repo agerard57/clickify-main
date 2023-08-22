@@ -37,7 +37,7 @@ export const Card: FC<CardProps> = ({ sectionTitle, cardContent }) => {
     gap: 30px;
     flex-direction: column;
 
-    & > :first-of-type {
+    & > span {
       text-align: center;
     }
   `;
