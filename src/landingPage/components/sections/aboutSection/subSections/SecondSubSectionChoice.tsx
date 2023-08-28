@@ -7,10 +7,10 @@ import { Typography } from "@mui/material";
 import { aboutImages } from "../../../../assets";
 import { styles } from "../../../../styles";
 
+const { Card, Image, SubSectionWrapper } = styles.aboutSection();
+
 export const SecondSubSectionChoice: FC = () => {
   const { t } = useTranslation("LandingPage");
-
-  const { Card, Image, SubSectionWrapper } = styles.aboutSection();
 
   return (
     <SubSectionWrapper>

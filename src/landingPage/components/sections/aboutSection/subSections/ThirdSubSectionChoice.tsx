@@ -7,15 +7,14 @@ import { TypographyVariants } from "@/theme";
 import { aboutImages } from "../../../../assets";
 import { styles } from "../../../../styles";
 
+const { Card, Image, SubSectionWrapper } = styles.aboutSection();
+
 export const ThirdSubSectionChoice: FC = () => {
   const { t } = useTranslation("LandingPage");
 
-  const { Card, Image, SubSectionWrapper } = styles.aboutSection();
-
   return (
     <SubSectionWrapper>
-      {/* TODO Change this crap */}
-      <Image src={aboutImages[1]} width="30%" />
+      <Image src={aboutImages[3]} width="50%" />
       <Card width="30%">
         <Typography variant={TypographyVariants.PARAGRAPH}>{t("about.subSections.team.content")}</Typography>
       </Card>

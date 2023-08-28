@@ -9,6 +9,17 @@ import { css, useTheme } from "@mui/material";
 import { ConstantsContext } from "@/constants";
 import { AboutSubSections } from "../../../typings";
 
+const SubSectionChoicesWrapper = styled.div`
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 5%;
+`;
+
+const Choice = styled.div`
+  cursor: pointer;
+  user-select: none;
+`;
+
 interface SubSectionChoicesProps {
   currentSubSection: AboutSubSections;
   setCurrentSubSection: Dispatch<SetStateAction<AboutSubSections>>;
@@ -23,17 +34,6 @@ export const SubSectionChoices: FC<SubSectionChoicesProps> = ({ currentSubSectio
   const onClick = (choice: AboutSubSections) => setCurrentSubSection(choice);
   const onMouseEnter = (choice: AboutSubSections) => setHovering(choice);
   const onMouseLeave = () => setHovering(null);
-
-  const SubSectionChoicesWrapper = styled.div`
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 5%;
-  `;
-
-  const Choice = styled.div`
-    cursor: pointer;
-    user-select: none;
-  `;
 
   return (
     <SubSectionChoicesWrapper>
