@@ -7,10 +7,10 @@ import { Typography } from "@mui/material";
 import { productImages } from "../../../../assets";
 import { styles } from "../../../../styles";
 
+const { Image } = styles.productSection();
+
 export const FirstSubSectionChoice: FC = () => {
   const { t } = useTranslation("LandingPage");
-
-  const { Image } = styles.productSection();
 
   return (
     <Fragment>

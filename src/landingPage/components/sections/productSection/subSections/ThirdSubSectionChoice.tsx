@@ -6,10 +6,10 @@ import { TypographyVariants } from "@/theme";
 import { productImages } from "../../../../assets";
 import { styles } from "../../../../styles";
 
+const { ParagraphImage, ParagraphText, ParagraphWrapper, SectionTitle } = styles.productSection();
+
 export const ThirdSubSectionChoice: FC = () => {
   const { t } = useTranslation("LandingPage");
-
-  const { ParagraphImage, ParagraphText, ParagraphWrapper, SectionTitle } = styles.productSection();
 
   return (
     <>
