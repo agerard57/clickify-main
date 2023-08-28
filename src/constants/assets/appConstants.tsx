@@ -1,3 +1,4 @@
+import React from "react";
 import { faChartBar, faComment } from "@fortawesome/free-regular-svg-icons";
 import {
   faEnvelope,
@@ -8,8 +9,9 @@ import {
   faUsers,
   faVideoCamera,
 } from "@fortawesome/free-solid-svg-icons";
-import { AboutSubSections, ContactCategory, PricePlans } from "@/landingPage";
+import { AboutSubSections, Cards, ContactCategory, PricePlans } from "@/landingPage";
 import { routes } from "@/router";
+import { MainSupportTopics } from "@clickify/clickify-common";
 
 export const appConstants = {
   routes,
@@ -44,16 +46,30 @@ export const appConstants = {
         categories: [
           {
             title: "sales",
-            cards: [{ title: "demo", icon: faVideoCamera, link: "/deez" }],
+            cards: [{ title: Cards.DEMO, icon: faVideoCamera }],
           },
           {
             title: "support",
             cards: [
-              { title: "support", icon: faEnvelope, link: "/deez" },
-              { title: "documentation", icon: faFileLines, link: "/deez" },
+              { title: Cards.SUPPORT, icon: faEnvelope },
+              { title: Cards.DOCUMENTATION, icon: faFileLines },
             ],
           },
         ] as ContactCategory[],
+        modal: {
+          demo: {
+            topics: [
+              MainSupportTopics.ORDER,
+              MainSupportTopics.RETURNS_REFUNDS,
+              MainSupportTopics.TECHNICAL_ISSUES,
+              MainSupportTopics.PAYMENTS,
+              MainSupportTopics.CUSTOMER_SERVICE,
+              MainSupportTopics.SECURITY,
+              MainSupportTopics.FEEDBACK,
+              MainSupportTopics.OTHER,
+            ] as MainSupportTopics[],
+          },
+        },
       },
     },
   },
