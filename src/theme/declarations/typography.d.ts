@@ -10,5 +10,6 @@ declare module "@mui/material/Typography" {
     [TypographyVariants.PARAGRAPH]: true;
     [TypographyVariants.SMALL_TEXT]: true;
     [TypographyVariants.PARAGRAPH_TITLE]: true;
+    [TypographyVariants.INPUT_LABEL]: true;
   }
 }

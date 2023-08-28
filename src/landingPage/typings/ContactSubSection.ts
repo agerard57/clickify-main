@@ -1,12 +1,17 @@
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 
+export enum Cards {
+  DEMO = "demo",
+  SUPPORT = "support",
+  DOCUMENTATION = "documentation",
+}
+
 export interface CardContentProps {
-  title: string;
+  title: Cards;
   icon: IconDefinition;
-  link: string;
 }
 
 export interface ContactCategory {
-  title: string;
+  title: "sales" | "support";
   cards: CardContentProps[];
 }

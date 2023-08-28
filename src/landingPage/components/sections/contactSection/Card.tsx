@@ -8,12 +8,23 @@ import { Button, Typography, useTheme } from "@mui/material";
 
 import { CardContentProps } from "../../../typings";
 
+const CardContent = styled.div`
+  display: flex;
+  gap: 30px;
+  flex-direction: column;
+
+  & > span {
+    text-align: center;
+  }
+`;
+
 interface CardProps {
   sectionTitle: string;
   cardContent: CardContentProps;
+  handleOpen: (current: string) => void;
 }
 
-export const Card: FC<CardProps> = ({ sectionTitle, cardContent }) => {
+export const Card: FC<CardProps> = ({ sectionTitle, cardContent, handleOpen }) => {
   const { t } = useTranslation("LandingPage");
   const theme = useTheme();
 
@@ -32,16 +43,6 @@ export const Card: FC<CardProps> = ({ sectionTitle, cardContent }) => {
     justify-content: space-between;
   `;
 
-  const CardContent = styled.div`
-    display: flex;
-    gap: 30px;
-    flex-direction: column;
-
-    & > span {
-      text-align: center;
-    }
-  `;
-
   const CardIcon = styled(FontAwesomeIcon)`
     width: 50px;
     height: 50px;
@@ -58,7 +59,9 @@ export const Card: FC<CardProps> = ({ sectionTitle, cardContent }) => {
         <CardIcon icon={cardContent.icon} />
         <Typography>{t(`${translationKeyPrefix}.content`)}</Typography>
       </CardContent>
-      <Button variant={ButtonVariants.PRIMARY}>{t(`${translationKeyPrefix}.button`)}</Button>
+      <Button variant={ButtonVariants.PRIMARY} onClick={() => handleOpen(cardContent.title)}>
+        {t(`${translationKeyPrefix}.button`)}
+      </Button>
     </CardContainer>
   );
 };

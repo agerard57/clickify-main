@@ -1,3 +1,4 @@
 export * as i18n from "./i18n";
 
-export { AboutSubSections, ContactCategory, PricePlans, Sections } from "./typings";
+export { LandingPage } from "./components";
+export { AboutSubSections, Cards, ContactCategory, PricePlans, Sections } from "./typings";

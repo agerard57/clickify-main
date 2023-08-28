@@ -5,7 +5,7 @@ import { TypographyVariants } from "@/theme";
 import styled from "@emotion/styled";
 import { Typography } from "@mui/material";
 
-import { ContactCategory } from "../../../typings";
+import { Cards as CardsEnum, ContactCategory } from "../../../typings";
 import { Card } from "./Card";
 
 const CategoryContainer = styled.div`
@@ -22,9 +22,10 @@ const Cards = styled.div`
 
 interface CategoryProps {
   section: ContactCategory;
+  handleOpen: (current: CardsEnum) => void;
 }
 
-export const Category: FC<CategoryProps> = ({ section }) => {
+export const Category: FC<CategoryProps> = ({ section, handleOpen }) => {
   const { t } = useTranslation("LandingPage");
 
   const translationKeyPrefix = `contact.categories.${section.title}`;
@@ -34,7 +35,7 @@ export const Category: FC<CategoryProps> = ({ section }) => {
       <Typography variant={TypographyVariants.SECTION_TITLE}>{t(`${translationKeyPrefix}.title`)}</Typography>
       <Cards>
         {section.cards.map((cardContent, cardIndex) => (
-          <Card sectionTitle={translationKeyPrefix} cardContent={cardContent} key={cardIndex} />
+          <Card sectionTitle={translationKeyPrefix} cardContent={cardContent} handleOpen={handleOpen} key={cardIndex} />
         ))}
       </Cards>
     </CategoryContainer>

@@ -121,23 +121,23 @@
               "form": {
                 "name": {
                   "label": "Nom *",
-                  "default": "Entrez vos nom et prénom"
+                  "placeholder": "Entrez vos nom et prénom"
                 },
                 "companyName": {
                   "label": "Nom de l'entreprise *",
-                  "default": "Remplissez le nom de votre entreprise"
+                  "placeholder": "Remplissez le nom de votre entreprise"
                 },
                 "email": {
                   "label": "Email *",
-                  "default": "Entrez votre adresse électronique"
+                  "placeholder": "Entrez votre adresse électronique"
                 },
                 "phoneNumber": {
                   "label": "Numéro de téléphone *",
-                  "default": "Entrez votre numéro de téléphone"
+                  "placeholder": "Entrez votre numéro de téléphone"
                 },
                 "projectDetailsOrQuestions": {
                   "label": "Détails du projet ou questions *",
-                  "default": "Veuillez nous décrire votre demande"
+                  "placeholder": "Veuillez nous décrire votre demande"
                 },
                 "bouton": "Envoyer la demande"
               }
@@ -163,35 +163,32 @@
               "form": {
                 "topic": {
                   "label": "Sujet *",
-                  "default": "Sélectionnez un sujet",
                   "topics": {
                     "order": "Commande",
-                    "paiements": "Paiements",
-                    "userAccount": "Compte utilisateur",
-                    "products": "Produits",
-                    "shippingDelivery": "Expédition/Livraison",
+                    "returnsAndRefunds": "Retours et remboursements",
+                    "technicalIssues": "Problèmes techniques",
+                    "payements": "Paiements",
                     "customerService": "Service client",
                     "security": "Sécurité",
-                    "technicalIssues": "Problèmes techniques",
-                    "returnsAndRefunds": "Retours et remboursements",
+                    "feedback": "Retour d'information",
                     "other": "Autre"
                   }
                 },
                 "companyName": {
                   "label": "Nom de l'entreprise *",
-                  "default": "Remplissez le nom de votre entreprise"
+                  "placeholder": "Remplissez le nom de votre entreprise"
                 },
                 "email": {
                   "label": "Email *",
-                  "default": "Entrez votre adresse électronique"
+                  "placeholder": "Entrez votre adresse électronique"
                 },
                 "subject": {
                   "label": " Sujet *",
-                  "default": " Quel est l'objet de votre problème ?"
+                  "placeholder": " Quel est l'objet de votre problème ?"
                 },
                 "details": {
                   "label": " Comment pouvons-nous vous aider *",
-                  "default": "Veuillez décrire votre problème plus en détail"
+                  "placeholder": "Veuillez décrire votre problème plus en détail"
                 },
                 "button": "Envoyer la demande"
               }

@@ -20,4 +20,5 @@ export enum TypographyVariants {
   PARAGRAPH = "paragraph",
   SMALL_TEXT = "smallText",
   PARAGRAPH_TITLE = "paragraphTitle",
+  INPUT_LABEL = "inputLabel",
 }

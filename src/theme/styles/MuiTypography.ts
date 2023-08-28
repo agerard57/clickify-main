@@ -31,6 +31,10 @@ export const MuiTypography = {
       fontWeight: 400,
       lineHeight: "24px",
     },
+    [TypographyVariants.INPUT_LABEL]: {
+      fontSize: 15,
+      fontWeight: 400,
+    },
     [TypographyVariants.SMALL_TEXT]: {
       fontSize: 11,
       fontWeight: 400,

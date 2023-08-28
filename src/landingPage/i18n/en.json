@@ -121,23 +121,23 @@
               "form": {
                 "name": {
                   "label": "Name *",
-                  "default": "Enter your first and last name"
+                  "placeholder": "Enter your first and last name"
                 },
                 "companyName": {
                   "label": "Company name *",
-                  "default": "Fill out your company name"
+                  "placeholder": "Fill out your company name"
                 },
                 "email": {
                   "label": "Email *",
-                  "default": "Enter your email address"
+                  "placeholder": "Enter your email address"
                 },
                 "phoneNumber": {
                   "label": "Phone number *",
-                  "default": "Enter your phone number"
+                  "placeholder": "Enter your phone number"
                 },
                 "projectDetailsOrQuestions": {
                   "label": "Project details or Questions *",
-                  "default": "Please tell us about your inquiry"
+                  "placeholder": "Please tell us about your inquiry"
                 },
                 "button": "Send the request"
               }
@@ -163,35 +163,32 @@
               "form": {
                 "topic": {
                   "label": "Topic *",
-                  "default": "Select a topic",
                   "topics": {
                     "order": "Order",
+                    "returnsAndRefunds": "Returns and Refunds",
+                    "technicalIssues": "Technical Issues",
                     "payments": "Payments",
-                    "userAccount": "User Account",
-                    "products": "Products",
-                    "shippingDelivery": "Shipping/Delivery",
                     "customerService": "Customer Service",
                     "security": "Security",
-                    "technicalIssues": "Technical Issues",
-                    "returnsAndRefunds": "Returns and Refunds",
+                    "feedback": "Feedback",
                     "other": "Other"
                   }
                 },
                 "companyName": {
                   "label": "Company name *",
-                  "default": "Fill out your company name"
+                  "placeholder": "Fill out your company name"
                 },
                 "email": {
                   "label": "Email *",
-                  "default": "Enter your email address"
+                  "placeholder": "Enter your email address"
                 },
                 "subject": {
                   "label": "Subject *",
-                  "default": "What is your issue about?"
+                  "placeholder": "What is your issue about?"
                 },
                 "details": {
                   "label": "How can we help you *",
-                  "default": "Please describe your issue in more details"
+                  "placeholder": "Please describe your issue in more details"
                 },
                 "button": "Send the request"
               }
