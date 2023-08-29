@@ -11,4 +11,9 @@ export const routes: Routes = {
     element: <LandingPage />,
     sections: ["welcome", "product", "pricing", "about", "contact"],
   },
+  [Page.AUTH]: {
+    name: Page.AUTH,
+    path: "/auth",
+    element: <div>Auth</div>,
+  },
 };

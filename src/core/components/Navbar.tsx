@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Toolbar, Tooltip, Typography, useTheme } from "@mui/material";
 
 import { FullLogo } from "../assets";
+import { AuthPages } from "@/authPage";
 
 export const Navbar: FC = () => {
   const { t } = useTranslation("Core");
@@ -78,7 +79,9 @@ export const Navbar: FC = () => {
   return (
     <>
       <HeaderWrapper>
-        <Logo src={FullLogo} alt="logo" />
+        <Link to="/">
+          <Logo src={FullLogo} alt="logo" />
+        </Link>
         <NavBarWrapper>
           {route.sections.map((section: Sections) => (
             <Link reloadDocument key={section} to={`/#${section}`}>
@@ -87,8 +90,12 @@ export const Navbar: FC = () => {
           ))}
         </NavBarWrapper>
         <ButtonsWrapper>
-          <Button variant={ButtonVariants.TEXT}>{t("loginButtons.signUp")}</Button>
-          <Button variant={ButtonVariants.PRIMARY}>{t("loginButtons.login")}</Button>
+          <Link to={{ pathname: Page.AUTH, search: `page=${AuthPages.SIGN_UP}` }}>
+            <Button variant={ButtonVariants.TEXT}>{t("loginButtons.signUp")}</Button>
+          </Link>
+          <Link to={{ pathname: Page.AUTH, search: `page=${AuthPages.LOGIN} ` }}>
+            <Button variant={ButtonVariants.PRIMARY}>{t("loginButtons.login")}</Button>
+          </Link>
           <Button variant={ButtonVariants.TEXT}>
             <FontAwesomeIcon icon={faBook} />
           </Button>
