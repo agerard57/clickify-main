@@ -1,38 +1,38 @@
-import styled from "@emotion/styled";
-import {
-  Button,
-  FormControl,
-  InputLabel,
-  MenuItem,
-  Popover,
-  Select,
-  SelectChangeEvent,
-  Toolbar,
-  Typography,
-} from "@mui/material";
-import React, { FC, useContext, useState } from "react";
+import React, { FC, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { HashLink } from "react-router-hash-link";
-import { Page } from "@/router";
+import { Link, useLocation } from "react-router-dom";
+
 import { ConstantsContext } from "@/constants";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Sections } from "@/landingPage";
+import { LanguageCode, useLanguage } from "@/language";
+import { Page } from "@/router";
+import { ButtonVariants } from "@/theme";
+import styled from "@emotion/styled";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Toolbar, Tooltip, Typography, useTheme } from "@mui/material";
+
 import { FullLogo } from "../assets";
 
 export const Navbar: FC = () => {
   const { t } = useTranslation("Core");
+  const theme = useTheme();
+  const location = useLocation();
+  const language = useLanguage();
 
   const appConstants = useContext(ConstantsContext);
   const route = appConstants.routes[Page.LANDING_PAGE];
 
-  const [age, setAge] = React.useState("");
+  const [currentSection, setCurrentSection] = useState<Sections | null>(null);
 
-  const handleChange = (event: SelectChangeEvent) => {
-    setAge(event.target.value as string);
-  };
+  const onLanguageClick = () =>
+    language.change(language.language === LanguageCode.EN ? LanguageCode.FR : LanguageCode.EN);
 
   const HeaderWrapper = styled(Toolbar)`
-    margin-top: 10px;
+    position: fixed;
+    width: -webkit-fill-available;
+    background-color: ${theme.app.core.navbar.background};
+    z-index: 1;
     a {
       text-decoration: none;
     }
@@ -46,7 +46,6 @@ export const Navbar: FC = () => {
 
   const NavBarWrapper = styled.div`
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     width: 480px;
@@ -55,33 +54,49 @@ export const Navbar: FC = () => {
 
   const ButtonsWrapper = styled.div`
     display: flex;
-    flex-direction: row;
     align-items: center;
     justify-content: space-between;
     margin-right: 20px;
   `;
 
-  const PopoverContainer = styled(Popover)`
-    position: absolute;
-    right: 30px;
-    top: 60px;
-  `;
+  useEffect(() => {
+    const handleHashChange = () => {
+      const { hash } = window.location;
+      const { pathname } = location;
+      // Also add types
+      setCurrentSection(pathname !== "/" ? null : (hash.replace("#", "") as Sections));
+    };
+
+    window.addEventListener("hashchange", handleHashChange);
+    handleHashChange();
+
+    return () => {
+      window.removeEventListener("hashchange", handleHashChange);
+    };
+  }, []);
 
   return (
     <>
       <HeaderWrapper>
         <Logo src={FullLogo} alt="logo" />
         <NavBarWrapper>
-          {route.sections.map((section, index) => (
-            <HashLink key={section} to={`${route.path}#${section}`}>
-              <Typography fontWeight={index === 0 ? 700 : 500}>{t(`sections.${section}`)}</Typography>
-            </HashLink>
+          {route.sections.map((section: Sections) => (
+            <Link reloadDocument key={section} to={`/#${section}`}>
+              <Typography fontWeight={currentSection === section ? 700 : 500}>{t(`sections.${section}`)}</Typography>
+            </Link>
           ))}
         </NavBarWrapper>
         <ButtonsWrapper>
-          <Typography>Sign up</Typography>
-          <Button>Login</Button>
-          <FontAwesomeIcon icon={faBook} />
+          <Button variant={ButtonVariants.TEXT}>{t("loginButtons.signUp")}</Button>
+          <Button variant={ButtonVariants.PRIMARY}>{t("loginButtons.login")}</Button>
+          <Button variant={ButtonVariants.TEXT}>
+            <FontAwesomeIcon icon={faBook} />
+          </Button>
+          <Tooltip title={t("languages.switch")} arrow placement="bottom-start">
+            <Button variant={ButtonVariants.TEXT} onClick={onLanguageClick}>
+              {t("languages.current")}
+            </Button>
+          </Tooltip>
         </ButtonsWrapper>
       </HeaderWrapper>
     </>

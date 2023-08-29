@@ -1,4 +1,4 @@
-import { colorPalette } from "./colorPalette";
+import { MuiButton, MuiTypography } from "./styles";
 
 export const muiTheme = {
   palette: {
@@ -10,24 +10,7 @@ export const muiTheme = {
     },
   },
   components: {
-    MuiTypography: {
-      styleOverrides: {
-        root: {
-          fontFamily: "Lexend",
-          fontSize: 14,
-          fontWeightLight: 600,
-          color: colorPalette.primaryBlack,
-        },
-        title: {
-          fontSize: 30,
-          fontWeight: 700,
-          letterSpacing: "1px",
-        },
-        subtitle: {
-          fontSize: 16,
-          fontWeight: 500,
-        },
-      },
-    },
+    MuiTypography,
+    MuiButton,
   },
 } as const;

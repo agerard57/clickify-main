@@ -35,7 +35,8 @@ module.exports = {
     "prettier",
   ],
   rules: {
-    indent: ["error", 2],
+    indent: "off",
+    "no-nested-ternary": "off",
     "no-shadow": "off",
     "@typescript-eslint/no-shadow": "error",
     "react/no-unknown-property": ["error", { ignore: ["css"] }],

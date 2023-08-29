@@ -13,8 +13,8 @@
     "login": "Se connecter"
   },
   "languages": {
-    "en": "EN",
-    "fr": "FR"
+    "current": "FR",
+    "switch": "Switch to English"
   },
   "tooltips": {
     "dashboard": "Aller au dashboard ↗",

@@ -6,8 +6,8 @@
   "product": {
     "title": "Nous vous aidons à aider les autres !",
     "subTitle": "Grâce à notre aide, nous espérons guider votre activité / entreprise vers la réussite",
-    "sections": {
-      "unselected": {
+    "subSections": {
+      "0": {
         "content": {
           "1": "Clickify est une solution tout-en-un qui permet aux entreprises de gérer facilement leurs ventes en ligne. En quelques clics, vous pouvez mettre en place votre site de commerce électronique en un rien de temps. En fournissant une solution clé en main pour la numérisation, les entreprises peuvent offrir à leurs clients une expérience d'achat transparente et accessible, quels que soient les défis à relever. Avec Clickify, vous pouvez mettre votre entreprise en ligne et commencer à vendre à des clients du monde entier en toute simplicité",
           "2": "Nos outils puissants vous permettent de gérer les employés, les clients, les produits, les commandes et bien plus encore. Vous aurez accès à des tableaux de bord et à des rapports détaillés, qui vous fourniront les informations dont vous avez besoin pour optimiser votre activité en ligne et maximiser vos ventes",
@@ -16,7 +16,7 @@
       },
       "1": {
         "number": "1",
-        "title": "Créez votre compte",
+        "title": "Choisissez votre plan",
         "content": {
           "1": "Sélectionnez votre plan adapté à vos besoins !",
           "2": "Chez Clickify, nous comprenons que chaque entreprise est unique, avec des besoins et des budgets différents. C'est pourquoi nous proposons trois plans flexibles adaptés à vos besoins spécifiques, afin que vous puissiez choisir celui qui convient le mieux à votre activité en ligne. Que vous débutiez et ayez besoin de toutes les bases, ou que vous soyez un expert en commerce électronique cherchant à faire passer votre boutique au niveau supérieur, nous avons un plan pour vous"
@@ -39,71 +39,71 @@
           "2": "L'étape suivante consiste à ajouter vos produits à votre boutique en ligne ! Avec Clickify, c'est un jeu d'enfant de présenter vos produits et de mettre en valeur leurs caractéristiques uniques avec de superbes images, des descriptions détaillées et des prix compétitifs",
           "3": "Vous pouvez également créer des catégories et des étiquettes pour aider les clients à naviguer facilement et à trouver exactement ce qu'ils recherchent - en leur offrant une expérience d'achat à la fois facile et agréable. Et le meilleur ? C'est incroyablement rapide et facile à mettre en place, vous pouvez donc commencer à vendre en un rien de temps !",
           "4": "Et voilà ! En quelques étapes simples, votre site de commerce électronique est maintenant opérationnel !"
-        },
-        "more": "Consultez nos tarifs..."
-      }
-    },
-    "pricing": {
-      "title": "Prêt à créer votre boutique ? Choisissez votre formule !",
-      "subTitle": "Nous proposons 3 plans qui vous donneront les outils nécessaires pour commencer votre aventure !",
-      "planComponent": {
-        "popular": "Choix populaire",
-        "features": "Caractéristiques ",
-        "currency": "$",
-        "month": "mois",
-        "more": "...et toutes les autres fonctionnalités des plans précédents"
+        }
       },
-      "plans": {
-        "basic": {
-          "title": "Basique",
-          "description": "Tout ce qui est nécessaire pour démarrer votre boutique, gérer vos produits et traiter les paiements",
-          "features": {
-            "1": "Taxes : 1,8% + 0,20$ par achat",
-            "2": "Jusqu'à 100 produits",
-            "3": "2 Comptes d'employés"
-          }
-        },
-        "clickify": {
-          "title": "Clickify",
-          "description": "Faites passer votre boutique au niveau supérieur avec des rapports avancés, des frais de transaction réduits et plus de comptes de personnel",
-          "features": {
-            "1": "Taxes : 1,6% + 0,20$ par achat",
-            "2": "Jusqu'à 500 produits",
-            "3": "5 comptes d'employés",
-            "4": "Rapports avancés",
-            "5": "Ajouter plusieurs magasins"
-          }
-        },
-        "premium": {
-          "title": "Premium",
-          "description": "Obtenez le meilleur de Clickify grâce aux avantages précédents, ainsi que plus de comptes de personnel et des frais de transaction encore plus bas",
-          "features": {
-            "1": "Taxes : 1,4% + 0,20 $ par achat",
-            "2": "Jusqu'à 1000 produits",
-            "3": "10 comptes d'employés",
-            "4": "Support client in-app"
-          }
+      "more": "Consultez nos tarifs..."
+    }
+  },
+  "pricing": {
+    "title": "Prêt à créer votre boutique ? Choisissez votre formule !",
+    "subTitle": "Nous proposons 3 plans qui vous donneront les outils nécessaires pour commencer votre aventure !",
+    "planComponents": {
+      "popular": "Choix populaire",
+      "features": "Caractéristiques:",
+      "currency": "${{price}}",
+      "month": "/mois",
+      "more": "...et toutes les autres fonctionnalités des plans précédents"
+    },
+    "plans": {
+      "basic": {
+        "title": "Basique",
+        "description": "Tout ce qui est nécessaire pour démarrer votre boutique, gérer vos produits et traiter les paiements",
+        "features": {
+          "1": "Taxes : 1,8% + 0,20$ par achat",
+          "2": "Jusqu'à 100 produits",
+          "3": "2 Comptes d'employés"
+        }
+      },
+      "clickify": {
+        "title": "Clickify",
+        "description": "Faites passer votre boutique au niveau supérieur avec des rapports avancés, des frais de transaction réduits et plus de comptes de personnel",
+        "features": {
+          "1": "Taxes : 1,6% + 0,20$ par achat",
+          "2": "Jusqu'à 500 produits",
+          "3": "5 comptes d'employés",
+          "4": "Rapports avancés",
+          "5": "Ajouter plusieurs magasins"
+        }
+      },
+      "premium": {
+        "title": "Premium",
+        "description": "Obtenez le meilleur de Clickify grâce aux avantages précédents, ainsi que plus de comptes de personnel et des frais de transaction encore plus bas",
+        "features": {
+          "1": "Taxes : 1,4% + 0,20 $ par achat",
+          "2": "Jusqu'à 1000 produits",
+          "3": "10 comptes d'employés",
+          "4": "Support client in-app"
         }
       }
     },
     "more": "Découvrez notre histoire et notre mission..."
   },
   "about": {
-    "sections": {
+    "subSections": {
       "story": {
-        "title": "Notre histoire",
-        "content": "Pendant la pandémie de COVID-19, nous avons constaté que de nombreuses entreprises avaient du mal à s'adapter à l'évolution soudaine vers les ventes en ligne. Nous voulions aider ces entreprises en leur proposant une solution simple et accessible pour créer un site de commerce électronique. C'est alors que nous avons lancé Clickify, une plateforme conçue pour répondre aux besoins des entreprises de toutes tailles, qu'il s'agisse de petites start-ups ou d'entreprises bien établies. Notre plateforme permet aux entreprises de présenter leurs produits, de traiter les paiements et de gérer les commandes sans aucune expertise technique"
+        "title": "Notre \\histoire\\",
+        "content": "Pendant la pandémie de COVID-19, nous avons constaté que de nombreuses entreprises avaient du mal à s'adapter à l'évolution soudaine vers les ventes en ligne.\nNous voulions aider ces entreprises en leur proposant une solution simple et accessible pour créer un site de commerce électronique.\n\nC'est alors que nous avons lancé Clickify, une plateforme conçue pour répondre aux besoins des entreprises de toutes tailles, qu'il s'agisse de petites start-ups ou d'entreprises bien établies. Notre plateforme permet aux entreprises de présenter leurs produits, de traiter les paiements et de gérer les commandes sans aucune expertise technique"
       },
       "mission": {
-        "title": "Notre mission",
-        "content": "La mission de Clickify est de permettre aux entreprises de toutes tailles d'établir une forte présence en ligne et d'être compétitives à l'ère du numérique.\nNous pensons que chaque entreprise devrait avoir la possibilité de prospérer en ligne, indépendamment de son expertise technique ou de son budget.\nNotre plateforme simplifie le processus de création d'un site Web de commerce électronique, le rendant accessible aux entreprises disposant de ressources limitées. Nous nous efforçons de fournir une plateforme intuitive et conviviale qui permet aux entreprises de se concentrer sur ce qu'elles font le mieux : vendre leurs produits et services. Chez Clickify, nous nous engageons à soutenir les entreprises dans leur parcours numérique et à les aider à atteindre leur plein potentiel"
+        "title": "Notre \\mission\\",
+        "content": "La mission de Clickify est de permettre aux entreprises de toutes tailles d'établir une forte présence en ligne et d'être compétitives à l'ère du numérique.\n\nNous pensons que chaque entreprise devrait avoir la possibilité de prospérer en ligne, indépendamment de son expertise technique ou de son budget.\nNotre plateforme simplifie le processus de création d'un site Web de commerce électronique, le rendant accessible aux entreprises disposant de ressources limitées. Nous nous efforçons de fournir une plateforme intuitive et conviviale qui permet aux entreprises de se concentrer sur ce qu'elles font le mieux : vendre leurs produits et services.\n\nChez Clickify, nous nous engageons à soutenir les entreprises dans leur parcours numérique et à les aider à atteindre leur plein potentiel"
       },
       "team": {
-        "title": "Our team",
-        "content": "Clickify est dirigé par une équipe de cinq développeurs dévoués qui sont passionnés par le fait d'aider les entreprises à réussir en ligne. Notre équipe est composée d'experts dans divers domaines, notamment le développement et la conception de sites Web. Ensemble, nous apportons une grande expérience et de nombreuses connaissances, ce qui nous permet de fournir à nos clients des services et une assistance de premier ordre"
-      },
-      "more": "Des questions ? Contactez-nous !"
-    }
+        "title": "Our \\team\\",
+        "content": "Clickify est dirigé par une équipe de cinq développeurs dévoués qui sont passionnés par le fait d'aider les entreprises à réussir en ligne. Notre équipe est composée d'experts dans divers domaines, notamment le développement et la conception de sites Web.\n\nEnsemble, nous apportons une grande expérience et de nombreuses connaissances, ce qui nous permet de fournir à nos clients des services et une assistance de premier ordre"
+      }
+    },
+    "more": "Des questions ? Contactez-nous !"
   },
   "contact": {
     "title": "Comment pouvons-nous vous aider",
@@ -121,23 +121,23 @@
               "form": {
                 "name": {
                   "label": "Nom *",
-                  "default": "Entrez vos nom et prénom"
+                  "placeholder": "Entrez vos nom et prénom"
                 },
                 "companyName": {
                   "label": "Nom de l'entreprise *",
-                  "default": "Remplissez le nom de votre entreprise"
+                  "placeholder": "Remplissez le nom de votre entreprise"
                 },
                 "email": {
                   "label": "Email *",
-                  "default": "Entrez votre adresse électronique"
+                  "placeholder": "Entrez votre adresse électronique"
                 },
                 "phoneNumber": {
                   "label": "Numéro de téléphone *",
-                  "default": "Entrez votre numéro de téléphone"
+                  "placeholder": "Entrez votre numéro de téléphone"
                 },
                 "projectDetailsOrQuestions": {
                   "label": "Détails du projet ou questions *",
-                  "default": "Veuillez nous décrire votre demande"
+                  "placeholder": "Veuillez nous décrire votre demande"
                 },
                 "bouton": "Envoyer la demande"
               }
@@ -149,86 +149,83 @@
             "button": "Consulter nos tarifs"
           }
         }
-      }
-    },
-    "support": {
-      "title": "Support",
-      "cards": {
-        "contactSupport": {
-          "title": "Contacter le support",
-          "content": " Si vous avez des difficultés à vous connecter, si vous avez besoin d'un transfert de site/DNS, ou si vous constatez une fraude/usurpation, contactez l'assistance",
-          "button": "Contactez-nous",
-          "modal": {
-            "title": "Contacter l'équipe d'assistance",
-            "content": " Si vous avez des difficultés à vous connecter, si vous avez besoin d'un transfert de site/DNS ou si vous constatez une fraude/usurpation, contactez l'équipe d'assistance",
-            "form": {
-              "topic": {
-                "label": "Sujet *",
-                "default": "Sélectionnez un sujet",
-                "topics": {
-                  "order": "Commande",
-                  "paiements": "Paiements",
-                  "userAccount": "Compte utilisateur",
-                  "products": "Produits",
-                  "shippingDelivery": "Expédition/Livraison",
-                  "customerService": "Service client",
-                  "security": "Sécurité",
-                  "technicalIssues": "Problèmes techniques",
-                  "returnsAndRefunds": "Retours et remboursements",
-                  "other": "Autre"
-                }
-              },
-              "companyName": {
-                "label": "Nom de l'entreprise *",
-                "default": "Remplissez le nom de votre entreprise"
-              },
-              "email": {
-                "label": "Email *",
-                "default": "Entrez votre adresse électronique"
-              },
-              "subject": {
-                "label": " Sujet *",
-                "default": " Quel est l'objet de votre problème ?"
-              },
-              "details": {
-                "label": " Comment pouvons-nous vous aider *",
-                "default": "Veuillez décrire votre problème plus en détail"
-              },
-              "button": "Envoyer la demande"
+      },
+      "support": {
+        "title": "Support",
+        "cards": {
+          "support": {
+            "title": "Contacter le support",
+            "content": " Si vous avez des difficultés à vous connecter, si vous avez besoin d'un transfert de site/DNS, ou si vous constatez une fraude/usurpation, contactez l'assistance",
+            "button": "Contactez-nous",
+            "modal": {
+              "title": "Contacter l'équipe d'assistance",
+              "content": " Si vous avez des difficultés à vous connecter, si vous avez besoin d'un transfert de site/DNS ou si vous constatez une fraude/usurpation, contactez l'équipe d'assistance",
+              "form": {
+                "topic": {
+                  "label": "Sujet *",
+                  "topics": {
+                    "order": "Commande",
+                    "returnsAndRefunds": "Retours et remboursements",
+                    "technicalIssues": "Problèmes techniques",
+                    "payements": "Paiements",
+                    "customerService": "Service client",
+                    "security": "Sécurité",
+                    "feedback": "Retour d'information",
+                    "other": "Autre"
+                  }
+                },
+                "companyName": {
+                  "label": "Nom de l'entreprise *",
+                  "placeholder": "Remplissez le nom de votre entreprise"
+                },
+                "email": {
+                  "label": "Email *",
+                  "placeholder": "Entrez votre adresse électronique"
+                },
+                "subject": {
+                  "label": " Sujet *",
+                  "placeholder": " Quel est l'objet de votre problème ?"
+                },
+                "details": {
+                  "label": " Comment pouvons-nous vous aider *",
+                  "placeholder": "Veuillez décrire votre problème plus en détail"
+                },
+                "button": "Envoyer la demande"
+              }
             }
+          },
+          "documentation": {
+            "title": "Documentation",
+            "content": "Notre documentation vous montre comment utiliser chaque partie de Clickify",
+            "button": "Consulter la documentation"
           }
         }
-      },
-      "documentation": {
-        "title": "Documentation",
-        "content": "Notre documentation vous montre comment utiliser chaque partie de Clickify",
-        "button": "Consulter la documentation"
       }
-    }
-  },
-  "footer": {
-    "sections": {
-      "aboutUs": {
-        "title": "À propos de nous",
-        "content": "Clickify fournit une solution facile et accessible aux entreprises de toutes tailles pour construire un site web de commerce électronique.\nFait pour le Master, en MNS.\nNous avons versé des mois de nos vies ainsi que notre <3 dans ce projet et nous espérons que vous l'aimerez :)"
-      },
-      "contactUs": {
-        "title": "Contactez-nous",
-        "content": "clickify@agerard.dev"
-      },
-      "termsAndConditions": {
-        "privacyPolicy": {
-          "title": "Politique de confidentialité",
-          "link": "|",
-          "cookiesPolicy": {
-            "title": "Politique en matière de cookies",
-            "link": "|"
-          }
+    },
+    "footer": {
+      "sections": {
+        "aboutUs": {
+          "title": "À propos de nous",
+          "content": "Clickify fournit une solution facile et accessible aux entreprises de toutes tailles pour construire un site web de commerce électronique.\n\nFait pour le Master, en MNS.\n\nNous avons versé des mois de nos vies ainsi que notre <3 dans ce projet et nous espérons que vous l'aimerez :)"
         },
-        "gotAtTop": "Revenir en haut",
-        "bottom": {
-          "copyright": "©2023 Clickify",
-          "allRightsReserved": "Tous droits réservés"
+        "contactUs": {
+          "title": "Contactez-nous",
+          "content": "clickify@agerard.dev"
+        },
+        "termsAndConditions": {
+          "privacyPolicy": {
+            "title": "Politique de confidentialité",
+            "link": "|",
+            "cookiesPolicy": {
+              "title": "Politique en matière de cookies",
+              "link": "|"
+            }
+          },
+          "gotAtTop": "Revenir en haut",
+          "bottom": {
+            "copyright": "©2023 Clickify",
+            "allRightsReserved": "Tous droits réservés"
+          }
         }
       }
     }
