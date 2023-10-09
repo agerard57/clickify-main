@@ -1,4 +1,6 @@
-import React from "react";
+import { AboutSubSections, Cards, ContactCategory, PricePlans } from "@/landingPage";
+import { routes } from "@/router";
+import { MainSupportTopics } from "@clickify/clickify-common";
 import { faChartBar, faComment } from "@fortawesome/free-regular-svg-icons";
 import {
   faEnvelope,
@@ -9,9 +11,6 @@ import {
   faUsers,
   faVideoCamera,
 } from "@fortawesome/free-solid-svg-icons";
-import { AboutSubSections, Cards, ContactCategory, PricePlans } from "@/landingPage";
-import { routes } from "@/router";
-import { MainSupportTopics } from "@clickify/clickify-common";
 
 export const appConstants = {
   routes,

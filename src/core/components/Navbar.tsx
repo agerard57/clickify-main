@@ -2,6 +2,7 @@ import React, { FC, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
+import { AuthPages } from "@/authPage";
 import { ConstantsContext } from "@/constants";
 import { Sections } from "@/landingPage";
 import { LanguageCode, useLanguage } from "@/language";
@@ -13,7 +14,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Toolbar, Tooltip, Typography, useTheme } from "@mui/material";
 
 import { FullLogo } from "../assets";
-import { AuthPages } from "@/authPage";
 
 export const Navbar: FC = () => {
   const { t } = useTranslation("Core");
@@ -64,7 +64,7 @@ export const Navbar: FC = () => {
     const handleHashChange = () => {
       const { hash } = window.location;
       const { pathname } = location;
-      // Also add types
+
       setCurrentSection(pathname !== "/" ? null : (hash.replace("#", "") as Sections));
     };
 

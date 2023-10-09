@@ -1,5 +1,7 @@
-import styled from "@emotion/styled";
 import React, { FC } from "react";
+
+import styled from "@emotion/styled";
+
 import { Navbar } from "./Navbar";
 
 interface Props {
@@ -7,7 +9,8 @@ interface Props {
 }
 
 const SectionWrapper = styled.div`
-  height: 99vh!;
+  display: flex;
+  flex-direction: column;
 `;
 
 export const Layout: FC<Props> = ({ children }) => {
