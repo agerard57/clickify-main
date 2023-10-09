@@ -20,31 +20,26 @@ export const DemoModal: FC = () => {
       <InputContainer>
         <TextField
           autoFocus
-          size="small"
           placeholder={t(`${formPrefix}.form.name.placeholder`)}
           inputLabel={t(`${formPrefix}.form.name.label`)}
           required
         />
         <TextField
-          size="small"
           placeholder={t(`${formPrefix}.form.companyName.placeholder`)}
           inputLabel={t(`${formPrefix}.form.companyName.label`)}
           required
         />
         <TextField
-          size="small"
           placeholder={t(`${formPrefix}.form.email.placeholder`)}
           inputLabel={t(`${formPrefix}.form.email.label`)}
           required
         />
         <TextField
-          size="small"
           placeholder={t(`${formPrefix}.form.phoneNumber.placeholder`)}
           inputLabel={t(`${formPrefix}.form.phoneNumber.label`)}
           required
         />
         <TextField
-          size="small"
           placeholder={t(`${formPrefix}.form.projectDetailsOrQuestions.placeholder`)}
           inputLabel={t(`${formPrefix}.form.projectDetailsOrQuestions.label`)}
           multiline
