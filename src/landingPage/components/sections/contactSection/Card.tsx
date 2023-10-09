@@ -18,6 +18,24 @@ const CardContent = styled.div`
   }
 `;
 
+const CardContainer = styled.div`
+  border-radius: 12px;
+  padding: 20px 15px;
+  width: 300px;
+  height: 400px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: space-between;
+`;
+
+const CardIcon = styled(FontAwesomeIcon)`
+  width: 50px;
+  height: 50px;
+  margin: 0 auto;
+`;
+
 interface CardProps {
   sectionTitle: string;
   cardContent: CardContentProps;
@@ -28,35 +46,19 @@ export const Card: FC<CardProps> = ({ sectionTitle, cardContent, handleOpen }) =
   const { t } = useTranslation("LandingPage");
   const theme = useTheme();
 
-  const CardContainer = styled.div`
-    border-radius: 12px;
-    background: ${theme.app.landingPage.sections.contact.cardBackground};
-    box-shadow: ${theme.app.landingPage.sections.contact.boxShadow};
-    padding: 20px 15px;
-    width: 300px;
-    height: 400px;
-    border: ${theme.app.landingPage.sections.contact.cardBorder};
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: space-between;
-  `;
-
-  const CardIcon = styled(FontAwesomeIcon)`
-    width: 50px;
-    height: 50px;
-    margin: 0 auto;
-    color: ${theme.app.landingPage.sections.contact.iconColor};
-  `;
-
   const translationKeyPrefix = `${sectionTitle}.cards.${cardContent.title}`;
 
   return (
-    <CardContainer>
+    <CardContainer
+      style={{
+        background: theme.app.landingPage.sections.contact.cardBackground,
+        boxShadow: theme.app.landingPage.sections.contact.boxShadow,
+        border: theme.app.landingPage.sections.contact.cardBorder,
+      }}
+    >
       <CardContent>
         <Typography variant={TypographyVariants.SUBTITLE}>{t(`${translationKeyPrefix}.title`)}</Typography>
-        <CardIcon icon={cardContent.icon} />
+        <CardIcon icon={cardContent.icon} style={{ color: theme.app.landingPage.sections.contact.iconColor }} />
         <Typography>{t(`${translationKeyPrefix}.content`)}</Typography>
       </CardContent>
       <Button variant={ButtonVariants.PRIMARY} onClick={() => handleOpen(cardContent.title)}>
