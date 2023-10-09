@@ -8,6 +8,19 @@ export const appTheme = {
       },
       highlightedText: `linear-gradient(45deg, ${colorPalette.blueGradient.from} 100%, ${colorPalette.blueGradient.to} 100%)`,
     },
+    auth: {
+      switchButton: {
+        textColor: colorPalette.white,
+        signUp: `linear-gradient(135deg, ${colorPalette.blueGradient.from} 0%, ${colorPalette.blueGradient.to} 50%)`,
+        login: `linear-gradient(270deg, ${colorPalette.blueGradient.from} 0%, ${colorPalette.blueGradient.to} 50%)`,
+        unselected: colorPalette.lightGrey,
+      },
+      imageContainer: {
+        background: `linear-gradient(265deg, ${colorPalette.blueGradient.from} 0%, ${colorPalette.blueGradient.to} 100%)`,
+        imagePadding: colorPalette.white,
+        textColor: colorPalette.white,
+      },
+    },
     landingPage: {
       icon: colorPalette.blue,
       sections: {

@@ -4,8 +4,8 @@ export const colorPalette = {
   grey: "#848484",
   lightGrey: "#C4C4C4",
   blueGradient: {
-    from: "#2343D1",
-    to: "#3757E5",
+    from: "#1b39cd",
+    to: "#6a91f5",
   },
   white: "#FFFFFF",
 } as const;
