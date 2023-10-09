@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 
+import { TypographyVariants } from "@/theme";
 import styled from "@emotion/styled";
 import { StandardTextFieldProps, TextField as MuiTextField, Typography } from "@mui/material";
-import { TypographyVariants } from "@/theme";
 
 interface TextFieldProps extends StandardTextFieldProps {
   inputLabel: string;
@@ -23,14 +23,13 @@ const TextFieldContainer = styled(
   gap: 20px;
   white-space: nowrap;
   justify-content: center;
-  display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 20px;
   justify-items: end;
 `;
 
-export const TextField: FC<TextFieldProps> = ({ inputLabel, inputPosition = "left", ...props }) => (
+export const TextField: FC<TextFieldProps> = ({ inputLabel, inputPosition = "left", size = "small", ...props }) => (
   <TextFieldContainer inputPosition={inputPosition}>
     <Typography variant={TypographyVariants.INPUT_LABEL} style={{ gridArea: "1 / 1 / 2 / 2" }}>
       <>
@@ -38,6 +37,6 @@ export const TextField: FC<TextFieldProps> = ({ inputLabel, inputPosition = "lef
         {props.required ?? "*"}
       </>
     </Typography>
-    <MuiTextField fullWidth {...props} style={{ gridArea: "1 / 2 / 2 / 3" }} />
+    <MuiTextField fullWidth size={size} {...props} style={{ gridArea: "1 / 2 / 2 / 3" }} />
   </TextFieldContainer>
 );

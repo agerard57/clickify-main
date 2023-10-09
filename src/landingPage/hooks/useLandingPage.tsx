@@ -54,8 +54,6 @@ export const useLandingPage = (): UseLandingPage => {
   }, []);
 
   useEffect(() => {
-    // Add case where if the hash is not in Section, then redirect to welcome
-    // It ain't working that much tbh
     if (
       window.location.hash === "" ||
       !Object.values(Sections).includes(window.location.hash.replace("#", "") as Sections)

@@ -1,0 +1,24 @@
+{
+  "signUp": {
+    "title": "S'inscrire",
+    "imageText": "Commencer dès maintenant l'aventure Clickify !"
+  },
+  "login": {
+    "title": "Se connecter",
+    "imageText": "Reprendre là où vous vous êtes arrêté !"
+  },
+  "inputs": {
+    "email": {
+      "label": "Email",
+      "placeholder": "Entrez l'email de l'entreprise",
+      "error": "Veuillez entrer un email valide"
+    },
+    "password": {
+      "label": "Mot de passe",
+      "placeholder": "Entrez le mot de passe de l'entreprise",
+      "error": "Veuillez entrer un mot de passe valide"
+    },
+    "rememberMe": "Se souvenir de moi",
+    "forgotPassword": "Mot de passe oublié?"
+  }
+}

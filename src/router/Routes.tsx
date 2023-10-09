@@ -1,7 +1,8 @@
-import React from "react";
 // Webpack fails here
-// eslint-disable-next-line import/no-internal-modules
+/* eslint-disable import/no-internal-modules */
+import React from "react";
 import { LandingPage } from "@/landingPage/components/LandingPage";
+import { AuthPage } from "@/authPage/components/AuthPage";
 import { Page, Routes } from "./interfaces";
 
 export const routes: Routes = {
@@ -10,5 +11,10 @@ export const routes: Routes = {
     path: "/",
     element: <LandingPage />,
     sections: ["welcome", "product", "pricing", "about", "contact"],
+  },
+  [Page.AUTH]: {
+    name: Page.AUTH,
+    path: "/auth",
+    element: <AuthPage />,
   },
 };

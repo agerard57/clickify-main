@@ -24,7 +24,6 @@ export const SupportModal: FC = () => {
         <TextField
           autoFocus
           select
-          size="small"
           defaultValue={MainSupportTopics.ORDER}
           inputLabel={t(`${formPrefix}.form.topic.label`)}
           required
@@ -36,25 +35,21 @@ export const SupportModal: FC = () => {
           ))}
         </TextField>
         <TextField
-          size="small"
           placeholder={t(`${formPrefix}.form.companyName.placeholder`)}
           inputLabel={t(`${formPrefix}.form.companyName.label`)}
           required
         />
         <TextField
-          size="small"
           placeholder={t(`${formPrefix}.form.email.placeholder`)}
           inputLabel={t(`${formPrefix}.form.email.label`)}
           required
         />
         <TextField
-          size="small"
           placeholder={t(`${formPrefix}.form.subject.placeholder`)}
           inputLabel={t(`${formPrefix}.form.subject.label`)}
           required
         />
         <TextField
-          size="small"
           placeholder={t(`${formPrefix}.form.details.placeholder`)}
           inputLabel={t(`${formPrefix}.form.details.label`)}
           multiline

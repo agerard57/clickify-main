@@ -1,0 +1,24 @@
+{
+  "signUp": {
+    "title": "Sign Up",
+    "imageText": "Start the Clickify adventure now!"
+  },
+  "login": {
+    "title": "Login",
+    "imageText": "Resume where you last left!"
+  },
+  "inputs": {
+    "email": {
+      "label": "Email",
+      "placeholder": "Enter company email",
+      "error": "Please enter a valid email address"
+    },
+    "password": {
+      "label": "Password",
+      "placeholder": "Enter company password",
+      "error": "Please enter a valid password"
+    },
+    "rememberMe": "Remember Me",
+    "forgotPassword": "Forgot Password?"
+  }
+}
