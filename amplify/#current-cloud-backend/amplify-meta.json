@@ -1,0 +1,15 @@
+{
+  "providers": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-clickifymain-dev-192308-authRole",
+      "UnauthRoleArn": "arn:aws:iam::890731805613:role/amplify-clickifymain-dev-192308-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::890731805613:role/amplify-clickifymain-dev-192308-authRole",
+      "Region": "eu-west-1",
+      "DeploymentBucketName": "amplify-clickifymain-dev-192308-deployment",
+      "UnauthRoleName": "amplify-clickifymain-dev-192308-unauthRole",
+      "StackName": "amplify-clickifymain-dev-192308",
+      "StackId": "arn:aws:cloudformation:eu-west-1:890731805613:stack/amplify-clickifymain-dev-192308/b05224b0-62da-11ee-bbcc-0a8f20907dd7",
+      "AmplifyAppId": "dyde6qi0355pu"
+    }
+  }
+}
