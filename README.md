@@ -1,6 +1,6 @@
-# Clickify Boilerplate
+# Clickify Main
 
-This is a boilerplate for all Clickify front-end projects.
+This is the front-end of the main website for Clickify.
 
 ## Installation
 

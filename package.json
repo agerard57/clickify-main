@@ -1,7 +1,7 @@
 {
-  "name": "clickify-boilerplate",
+  "name": "clickify-main",
   "version": "1.0",
-  "description": "Boilerplate for Clickify front-end projects",
+  "description": "Clickify's main Front-End project front-end projects",
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
@@ -21,7 +21,7 @@
     "test:cypress": "cypress run",
     "test:cypress:open": "cypress open"
   },
-  "repository": "github:agerard57/clickify-boilerplate",
+  "repository": "github:agerard57/clickify-main",
   "keywords": [
     "react",
     "typescript",
@@ -30,8 +30,7 @@
     "webpack",
     "eslint",
     "prettier",
-    "boilerplate",
-    "rkoziol"
+    "main"
   ],
   "author": "agerard57",
   "license": "MIT",
