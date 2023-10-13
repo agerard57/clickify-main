@@ -9,6 +9,13 @@ import { Typography, useTheme } from "@mui/material";
 
 import { SectionSpec } from "../typings";
 
+const BottomWrapper = styled.div`
+  bottom: 40px;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+`;
+
 interface Props {
   sectionSpec: SectionSpec;
   onClick?: () => void;
@@ -17,19 +24,6 @@ interface Props {
 export const EmptySection: FC<Props> = ({ sectionSpec, onClick }) => {
   const { t } = useTranslation("LandingPage");
   const theme = useTheme();
-
-  const BottomWrapper = styled.div`
-    bottom: 40px;
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-  `;
-
-  const Icon = styled(FontAwesomeIcon)`
-    height: 25px;
-    margin-top: 15px;
-    color: ${theme.app.landingPage.icon};
-  `;
 
   return (
     <div
@@ -45,7 +39,11 @@ export const EmptySection: FC<Props> = ({ sectionSpec, onClick }) => {
       {sectionSpec.nextSectionText && (
         <BottomWrapper>
           <Typography variant={TypographyVariants.SENTENCE}>{t(`${sectionSpec.name}.more`)}</Typography>
-          <Icon icon={faCircleDown} onClick={onClick} />
+          <FontAwesomeIcon
+            icon={faCircleDown}
+            onClick={onClick}
+            style={{ height: 25, marginTop: 15, color: theme.app.landingPage.icon }}
+          />
         </BottomWrapper>
       )}
     </div>
