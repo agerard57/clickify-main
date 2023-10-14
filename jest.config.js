@@ -8,7 +8,7 @@ module.exports = {
   collectCoverageFrom: ["<rootDir>/**/*.{ts,tsx}"],
   roots: ["<rootDir>/src"],
   preset: "ts-jest",
-  testRegex: "(\\.|/)(test|spec))\\.(ts|tsx)$",
+  testRegex: "(\\.|/)(test|spec)\\.(ts|tsx)$",
   transform: {
     "^.+\\.(ts|tsx)?$": "ts-jest",
     "^.+\\.(js|jsx)$": "babel-jest",
