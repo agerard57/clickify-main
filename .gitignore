@@ -4,3 +4,4 @@ test-coverage
 dist
 cypress/video
 cypress/screenshots
+package-lock.json
