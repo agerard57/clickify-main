@@ -1,8 +1,8 @@
 import styled from "@emotion/styled";
 import { Typography, useTheme } from "@mui/material";
 import React, { Fragment } from "react";
-import { TypographyVariants } from "@/theme";
 import { SerializedStyles } from "@emotion/react";
+import { TypographyVariants } from "@/theme";
 
 interface HighlightTextProps {
   text: string;

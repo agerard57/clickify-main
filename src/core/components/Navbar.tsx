@@ -2,16 +2,16 @@ import React, { FC, useContext, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
+import styled from "@emotion/styled";
+import { faBook } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Button, Toolbar, Tooltip, Typography, useTheme } from "@mui/material";
 import { AuthPages } from "@/authPage";
 import { ConstantsContext } from "@/constants";
 import { Sections } from "@/landingPage";
 import { LanguageCode, useLanguage } from "@/language";
 import { Page } from "@/router";
 import { ButtonVariants } from "@/theme";
-import styled from "@emotion/styled";
-import { faBook } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Button, Toolbar, Tooltip, Typography, useTheme } from "@mui/material";
 
 import { FullLogo } from "../assets";
 
