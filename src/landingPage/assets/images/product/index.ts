@@ -1,9 +1,9 @@
-import ZeroOneImage from "./0-1.webp";
-import ZeroTwoImage from "./0-2.webp";
-import ZeroThreeImage from "./0-3.webp";
-import TwoImage from "./2.webp";
-import ThreeOneImage from "./3-1.webp";
-import ThreeTwoImage from "./3-2.webp";
+import ZeroOneImage from "./zeroOneProductImage.webp";
+import ZeroTwoImage from "./zeroTwoProductImage.webp";
+import ZeroThreeImage from "./zeroThreeProductImage.webp";
+import TwoImage from "./twoProductImage.webp";
+import ThreeOneImage from "./threeOneProductImage.webp";
+import ThreeTwoImage from "./threeTwoProductImage.webp";
 
 export const productImages = {
   0: {
