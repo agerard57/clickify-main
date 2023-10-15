@@ -48,6 +48,20 @@ build:
     paths:
       - dist/
 
+zip:
+  stage: deploy
+  image:
+    name: ubuntu:latest
+  script:
+    - apt-get update
+    - apt-get install -y zip
+    - zip -r build.zip dist/
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "master"'
+  artifacts:
+    paths:
+      - build.zip
+
 .assume_role: &assume_role
   - >
     STS=($(aws sts assume-role-with-web-identity
@@ -64,9 +78,6 @@ build:
 
 .deploy_template: &deploy
   script:
-    - apt-get update
-    - apt-get install -y zip
-    - zip -r build.zip dist/
     - *assume_role
     - aws s3 cp build.zip s3://$S3_BUCKET/
   rules:
@@ -74,6 +85,7 @@ build:
 
 deploy_s3:
   stage: deploy
+  needs: [zip]
   image:
     name: amazon/aws-cli:latest
     entrypoint:
