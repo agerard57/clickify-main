@@ -4,12 +4,19 @@ stages:
   - build
   - deploy
 
+variables:
+  NPM_CACHE_KEY: "$CI_COMMIT_REF_NAME"
+
 lint:
   stage: lint
-  image: node:18
+  image: node:16
   script:
     - npm install
     - npm run lint
+  cache:
+    key: "$NPM_CACHE_KEY"
+    paths:
+      - node_modules/
   rules:
     - exists:
         - "*.js"
@@ -17,33 +24,34 @@ lint:
 
 test:
   stage: test
-  image: node:18
+  image: node:16
   script:
     - npm install
     - npm run test:jest
+  cache:
+    key: "$NPM_CACHE_KEY"
+    paths:
+      - node_modules/
   rules:
     - exists:
         - "*.js"
 
-build artifact:
+build:
   stage: build
-  image: node:latest
-  before_script:
-    - npm install
+  image: node:16
   script:
+    - npm install
     - npm run build
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "master"'
   artifacts:
     paths:
       - dist/
-    when: always
-  rules:
-    - if: '$CI_COMMIT_REF_NAME == "master"'
-      when: always
 
 .assume_role: &assume_role
   - >
     STS=($(aws sts assume-role-with-web-identity
-    --role-arn ${ROLE_ARN}
+    --role-arn arn:aws:iam::890731805613:role/CLICKIFY-MAIN-PROD-ROLE
     --role-session-name "GitLabRunner-${CI_PROJECT_ID}-${CI_PIPELINE_ID}"
     --web-identity-token $ID_TOKEN
     --duration-seconds 3600
@@ -54,6 +62,16 @@ build artifact:
   - export AWS_SESSION_TOKEN="${STS[2]}"
   - aws configure set region eu-west-1
 
+.deploy_template: &deploy
+  script:
+    - apt-get update
+    - apt-get install -y zip
+    - zip -r build.zip dist/
+    - *assume_role
+    - aws s3 cp build.zip s3://$S3_BUCKET/
+  rules:
+    - if: '$CI_COMMIT_REF_NAME == "master"'
+
 deploy_s3:
   stage: deploy
   image:
@@ -63,9 +81,4 @@ deploy_s3:
   id_tokens:
     ID_TOKEN:
       aud: clickify-main-prod
-  script:
-    - *assume_role
-    - aws s3 sync dist/ s3://$S3_BUCKET
-  rules:
-    - if: '$CI_COMMIT_REF_NAME == "master"'
-      when: always
+  <<: *deploy
