@@ -62,7 +62,7 @@ deploy_s3:
       - "/usr/bin/env"
   id_tokens:
     ID_TOKEN:
-      aud: react_s3_gl
+      aud: clickify-main-prod
   script:
     - *assume_role
     - aws s3 sync dist/ s3://$S3_BUCKET
