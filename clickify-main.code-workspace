@@ -1,9 +1,6 @@
 {
   "folders": [
-    {
-      "name": "📃 - Scripts",
-      "path": "./scripts"
-    },
+    { "name": "🧭 - Common", "path": "./node_modules/@clickify/clickify-common/src" },
     {
       "name": "🌟 - Core",
       "path": "./src/core"
@@ -43,7 +40,15 @@
     "todohighlight.keywords": ["TODO", "FIX"],
     "typescript.preferences.importModuleSpecifier": "relative",
     "typescript.tsc.autoDetect": "off",
-    "jest.disabledWorkspaceFolders": ["📃 - Scripts", "🌟 - Core", "🔐 - App constants", "🖌️ - Theming", "🌲 - Root"],
+    "jest.disabledWorkspaceFolders": [
+      "📃 - Scripts",
+      "🌟 - Core",
+      "🔐 - App constants",
+      "🖌️ - Theming",
+      "🌲 - Root",
+      "🧭 - Common"
+    ],
+
     "jest.showCoverageOnLoad": true,
     "jest.coverageFormatter": "GutterFormatter",
     "discord.enabled": true,
@@ -76,6 +81,8 @@
     },
     "[markdown]": {
       "editor.defaultFormatter": "esbenp.prettier-vscode"
-    }
+    },
+    "i18n-ally.localesPaths": ["enums"],
+    "i18n-ally.keystyle": "nested"
   }
 }

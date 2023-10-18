@@ -1,5 +1,12 @@
 {
-  "cSpell.words": ["Clickify"],
-  "i18n-ally.localesPaths": ["src/i18n", "src/authPage/i18n", "src/core/i18n", "src/landingPage/i18n"],
-  "i18n-ally.keystyle": "nested"
+  "cSpell.language": "en,fr",
+  "cSpell.words": ["Clickify", "clickify"],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.localesPaths": [
+    "src/i18n",
+    "src/accountPage/i18n",
+    "src/authPage/i18n",
+    "src/core/i18n",
+    "src/landingPage/i18n"
+  ]
 }
