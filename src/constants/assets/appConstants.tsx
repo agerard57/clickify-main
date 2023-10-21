@@ -1,6 +1,7 @@
-import { AboutSubSections, Cards, ContactCategory, PricePlans } from "@/landingPage";
+import { AccountSubPages } from "@/accountPage";
+import { AboutSubSections, Cards, ContactCategory } from "@/landingPage";
 import { routes } from "@/router";
-import { MainSupportTopics } from "@clickify/clickify-common";
+import { MainSupportTopics, PlanTypes } from "@clickify/clickify-common";
 import { faChartBar, faComment } from "@fortawesome/free-regular-svg-icons";
 import {
   faEnvelope,
@@ -14,29 +15,33 @@ import {
 
 export const appConstants = {
   routes,
+  accountPage: {
+    subPages: [AccountSubPages.COMPANY, AccountSubPages.PLAN, AccountSubPages.BILLING, AccountSubPages.HISTORY],
+    subscriptionHistoryFields: ["plan", "since", "expired", "price", "export"],
+  },
   landingPage: {
     sections: {
       about: [AboutSubSections.STORY, AboutSubSections.MISSION, AboutSubSections.TEAM],
       pricing: {
-        plans: [PricePlans.BASIC, PricePlans.CLICKIFY, PricePlans.PREMIUM],
-        basic: {
+        plans: [PlanTypes.BASIC, PlanTypes.CLICKIFY, PlanTypes.PREMIUM],
+        [PlanTypes.BASIC]: {
           features: [1, 2, 3],
           isPopularChoice: false,
-          price: 25,
+          price: 37,
           includePreviousTiersFeatures: false,
           icons: [faPercent, faShoppingCart, faUsers],
         },
-        clickify: {
+        [PlanTypes.CLICKIFY]: {
           features: [1, 2, 3, 4, 5],
           isPopularChoice: true,
-          price: 75,
+          price: 106,
           includePreviousTiersFeatures: true,
           icons: [faPercent, faShoppingCart, faUsers, faChartBar, faStore],
         },
-        premium: {
+        [PlanTypes.PREMIUM]: {
           features: [1, 2, 3, 4],
           isPopularChoice: false,
-          price: 275,
+          price: 309,
           includePreviousTiersFeatures: true,
           icons: [faPercent, faShoppingCart, faUsers, faComment],
         },
