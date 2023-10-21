@@ -1,0 +1,150 @@
+{
+  "title": "Compte de {{user}}",
+  "company": {
+    "title": "Informations de l'entreprise",
+    "description": "Gérez les informations de l'entreprise, y compris le numéro de téléphone, l'adresse e-mail, le mot de passe, ...",
+    "content": {
+      "display": {
+        "noData": "Pas de données",
+        "legalName": "Raison sociale légale",
+        "tradingName": "Nom commercial",
+        "email": "E-mail",
+        "billingAddress": "Adresse de facturation",
+        "registeredOn": "Enregistré le",
+        "lastPasswordGen": "Dernière modification de mot de passe",
+        "updatedOn": "Dernière modification du compte",
+        "button": "Modifier les données"
+      },
+      "edit": {
+        "legalName": {
+          "label": "Raison sociale légale",
+          "placeholder": "Entrez votre raison sociale légale",
+          "error": "La raison sociale légale est requise."
+        },
+        "tradingName": {
+          "label": "Nom commercial",
+          "placeholder": "Entrez votre nom commercial",
+          "error": "Le nom commercial est requis."
+        },
+        "email": {
+          "label": "E-mail",
+          "placeholder": "Entrez votre e-mail",
+          "error": "Adresse e-mail invalide."
+        },
+        "password": {
+          "label": "Mot de passe",
+          "placeholder": "Entrez votre mot de passe",
+          "error": "TODO DÉFINIR --- Le mot de passe doit comporter au moins 8 caractères."
+        },
+        "confirmPassword": {
+          "label": "Confirmer le mot de passe",
+          "placeholder": "Confirmez votre mot de passe",
+          "error": "Les mots de passe ne correspondent pas."
+        },
+        "billingAddress": {
+          "label": "Adresse de facturation",
+          "placeholder": {
+            "number": "N°",
+            "streetName": "Nom de la rue",
+            "city": "Ville",
+            "state": "État",
+            "zip": "Code postal",
+            "country": "Pays"
+          },
+          "error": "L'adresse de facturation est incomplète."
+        },
+        "buttons": {
+          "unsaved": "Vous avez des modifications non enregistrées",
+          "save": "Enregistrer les données",
+          "cancel": "Annuler"
+        }
+      }
+    }
+  },
+  "plan": {
+    "title": "Plan actuel",
+    "description": "Consultez les informations sur votre plan actuel",
+    "content": {
+      "noPlan": "Aucun plan",
+      "currentPlan": "Abonné depuis",
+      "expiresOn": "Expire le",
+      "buttons": {
+        "changePlan": "Changer de plan",
+        "cancelPlan": "Annuler le plan"
+      }
+    }
+  },
+  "billing": {
+    "title": "Facturation et paiements",
+    "description": "Consultez vos informations concernant le paiement",
+    "content": {
+      "display": {
+        "billingAddress": {
+          "title": "Adresse de facturation",
+          "button": "Modifier les données dans \"Informations de l'entreprise\""
+        },
+        "paymentMethod": {
+          "title": "Moyen de paiement",
+          "cardInformation": {
+            "label": "Informations de la carte",
+            "empty": "Aucune information de carte"
+          },
+          "button": "Modifier le moyen de paiement"
+        }
+      },
+      "edit": {
+        "cardHolderName": {
+          "label": "Nom complet du titulaire de la carte",
+          "placeholder": "Entrez votre nom complet",
+          "error": "Le nom du titulaire de la carte est requis."
+        },
+        "cardNumber": {
+          "label": "Numéro de la carte",
+          "placeholder": "Entrez le numéro de la carte",
+          "error": "Le numéro de la carte est requis."
+        },
+        "expirationDate": {
+          "label": "Date d'expiration",
+          "placeholder": "Entrez la date d'expiration de la carte",
+          "error": "La date d'expiration est requise."
+        },
+        "ccv": {
+          "label": "CCV",
+          "placeholder": "Entrez le code CCV de la carte",
+          "error": "Le code CCV est requis."
+        },
+        "buttons": {
+          "unsaved": "Vous avez des modifications non enregistrées",
+          "save": "Enregistrer les données",
+          "cancel": "Annuler"
+        }
+      }
+    }
+  },
+  "history": {
+    "title": "Historique des abonnements",
+    "description": "Consultez toutes vos commandes",
+    "table": {
+      "headers": {
+        "plan": "Plan",
+        "since": "Depuis",
+        "expired": "Expire",
+        "price": "Prix",
+        "export": "Exporter"
+      },
+      "content": {
+        "price": "${{price}}",
+        "exportTooltip": "Exporter au format PDF"
+      }
+    }
+  },
+  "backOffice": "Back-Office",
+  "close": {
+    "title": "Fermer le Compte",
+    "description": "Êtes-vous sûr de vouloir fermer votre compte ? Cette action est irréversible.",
+    "content": {
+      "confirmText": "Oui, Fermer Mon Compte",
+      "cancelText": "Non, Annuler"
+    }
+  }
+}

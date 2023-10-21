@@ -1,0 +1,150 @@
+{
+  "title": "{{user}}'s account",
+  "company": {
+    "title": "Company information",
+    "description": "Manage the company's information, including the phone number, the email address, the password, ...",
+    "content": {
+      "display": {
+        "noData": "No data",
+        "legalName": "Legal company name",
+        "tradingName": "Trading name",
+        "email": "Email",
+        "billingAddress": "Billing address",
+        "registeredOn": "Registered on",
+        "lastPasswordGen": "Last password change",
+        "updatedOn": "Last account edit",
+        "button": "Edit data"
+      },
+      "edit": {
+        "legalName": {
+          "label": "Legal company name",
+          "placeholder": "Enter your legal company name",
+          "error": "Legal company name is required."
+        },
+        "tradingName": {
+          "label": "Trading name",
+          "placeholder": "Enter your trading name",
+          "error": "Trading name is required."
+        },
+        "email": {
+          "label": "Email",
+          "placeholder": "Enter your email",
+          "error": "Invalid email address."
+        },
+        "password": {
+          "label": "Password",
+          "placeholder": "Enter your password",
+          "error": "TODO DEFINE --- Password must be at least 8 characters long."
+        },
+        "confirmPassword": {
+          "label": "Confirm password",
+          "placeholder": "Confirm your password",
+          "error": "Passwords do not match."
+        },
+        "billingAddress": {
+          "label": "Billing address",
+          "placeholder": {
+            "number": "Nb",
+            "streetName": "Street name",
+            "city": "City",
+            "state": "State",
+            "zip": "Zip code",
+            "country": "Country"
+          },
+          "error": "Billing address is incomplete."
+        },
+        "buttons": {
+          "unsaved": "You have unsaved changes",
+          "save": "Save data",
+          "cancel": "Cancel"
+        }
+      }
+    }
+  },
+  "plan": {
+    "title": "Current plan",
+    "description": "See infos about your current plan ",
+    "content": {
+      "noPlan": "No plan",
+      "currentPlan": "Subscribed since",
+      "expiresOn": "Expires on",
+      "buttons": {
+        "changePlan": "Change plan",
+        "cancelPlan": "Cancel plan"
+      }
+    }
+  },
+  "billing": {
+    "title": "Billing & Payments",
+    "description": "See your information concerning your payment",
+    "content": {
+      "display": {
+        "billingAddress": {
+          "title": "Billing address",
+          "button": "Edit data in \"Company information\""
+        },
+        "paymentMethod": {
+          "title": "Payment method",
+          "cardInformation": {
+            "label": "Card information",
+            "empty": "No card information"
+          },
+          "button": "Change payment method"
+        }
+      },
+      "edit": {
+        "cardHolderName": {
+          "label": "Full card holder name",
+          "placeholder": "Enter your full name",
+          "error": "Card holder name is required."
+        },
+        "cardNumber": {
+          "label": "Full card holder name",
+          "placeholder": "Enter your full name",
+          "error": "Card holder name is required."
+        },
+        "expirationDate": {
+          "label": "Expiration date",
+          "placeholder": "Enter the card's expiration date",
+          "error": "Expiration date is required."
+        },
+        "ccv": {
+          "label": "CCV",
+          "placeholder": "Enter your card's CCV code",
+          "error": "CCV is required."
+        },
+        "buttons": {
+          "unsaved": "You have unsaved changes",
+          "save": "Save data",
+          "cancel": "Cancel"
+        }
+      }
+    }
+  },
+  "history": {
+    "title": "Subscription history",
+    "description": "See all you orders",
+    "table": {
+      "headers": {
+        "plan": "Plan",
+        "since": "Since",
+        "expired": "Expires",
+        "price": "Price",
+        "export": "Export"
+      },
+      "content": {
+        "price": "${{price}}",
+        "exportTooltip": "Export as a PDF"
+      }
+    }
+  },
+  "backOffice": "Back-Office",
+  "close": {
+    "title": "Close Account",
+    "description": "Are you sure you want to close your account? This action cannot be undone.",
+    "content": {
+      "confirmText": "Yes, Close My Account",
+      "cancelText": "No, Cancel"
+    }
+  }
+}

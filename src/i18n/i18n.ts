@@ -2,9 +2,10 @@ import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
+import { LanguageCode } from "@/language";
 import { resources } from "./resources";
 
-const lng = ["fr", "en"];
+const lng = [LanguageCode.FR, LanguageCode.EN];
 
 i18n
   .use(new LanguageDetector())
@@ -15,7 +16,7 @@ i18n
       order: ["querystring", "localStorage"],
       lookupQuerystring: "lng",
     },
-    fallbackLng: "en",
+    fallbackLng: LanguageCode.EN,
     interpolation: { escapeValue: false },
     preload: lng,
     react: {
