@@ -17,7 +17,7 @@ export const PricingSection: FC = () => {
         <Typography variant={TypographyVariants.SUBTITLE}>{t("pricing.subTitle")}</Typography>
       </div>
       <div style={{ display: "flex", justifyContent: "space-around", margin: "50px 0", width: "100%", gap: 20 }}>
-        {appConstants.landingPage.sections.pricing.plans.map((plan, planIndex) => (
+        {appConstants.core.priceBox.plans.map((plan, planIndex) => (
           <PriceBox plan={plan} key={planIndex} />
         ))}
       </div>

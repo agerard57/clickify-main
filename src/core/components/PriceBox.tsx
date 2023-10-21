@@ -61,7 +61,7 @@ export const PriceBox: FC<PriceBoxProps> = ({ plan, isStatic = false }) => {
   const appConstants = useContext(ConstantsContext);
   const theme = useTheme();
 
-  const features = appConstants.core.pricing;
+  const features = appConstants.core.priceBox;
 
   const [hoveredBox, setHoveredBox] = useState<string | null>(null);
 

@@ -16,7 +16,7 @@ import {
 export const appConstants = {
   routes,
   core: {
-    pricing: {
+    priceBox: {
       plans: [PlanTypes.BASIC, PlanTypes.CLICKIFY, PlanTypes.PREMIUM],
       [PlanTypes.BASIC]: {
         features: [1, 2, 3],
