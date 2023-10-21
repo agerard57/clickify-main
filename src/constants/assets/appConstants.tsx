@@ -15,6 +15,32 @@ import {
 
 export const appConstants = {
   routes,
+  core: {
+    pricing: {
+      plans: [PlanTypes.BASIC, PlanTypes.CLICKIFY, PlanTypes.PREMIUM],
+      [PlanTypes.BASIC]: {
+        features: [1, 2, 3],
+        isPopularChoice: false,
+        price: 37,
+        includePreviousTiersFeatures: false,
+        icons: [faPercent, faShoppingCart, faUsers],
+      },
+      [PlanTypes.CLICKIFY]: {
+        features: [1, 2, 3, 4, 5],
+        isPopularChoice: true,
+        price: 106,
+        includePreviousTiersFeatures: true,
+        icons: [faPercent, faShoppingCart, faUsers, faChartBar, faStore],
+      },
+      [PlanTypes.PREMIUM]: {
+        features: [1, 2, 3, 4],
+        isPopularChoice: false,
+        price: 309,
+        includePreviousTiersFeatures: true,
+        icons: [faPercent, faShoppingCart, faUsers, faComment],
+      },
+    },
+  },
   accountPage: {
     subPages: [AccountSubPages.COMPANY, AccountSubPages.PLAN, AccountSubPages.BILLING, AccountSubPages.HISTORY],
     subscriptionHistoryFields: ["plan", "since", "expired", "price", "export"],
@@ -22,30 +48,6 @@ export const appConstants = {
   landingPage: {
     sections: {
       about: [AboutSubSections.STORY, AboutSubSections.MISSION, AboutSubSections.TEAM],
-      pricing: {
-        plans: [PlanTypes.BASIC, PlanTypes.CLICKIFY, PlanTypes.PREMIUM],
-        [PlanTypes.BASIC]: {
-          features: [1, 2, 3],
-          isPopularChoice: false,
-          price: 37,
-          includePreviousTiersFeatures: false,
-          icons: [faPercent, faShoppingCart, faUsers],
-        },
-        [PlanTypes.CLICKIFY]: {
-          features: [1, 2, 3, 4, 5],
-          isPopularChoice: true,
-          price: 106,
-          includePreviousTiersFeatures: true,
-          icons: [faPercent, faShoppingCart, faUsers, faChartBar, faStore],
-        },
-        [PlanTypes.PREMIUM]: {
-          features: [1, 2, 3, 4],
-          isPopularChoice: false,
-          price: 309,
-          includePreviousTiersFeatures: true,
-          icons: [faPercent, faShoppingCart, faUsers, faComment],
-        },
-      },
       contact: {
         categories: [
           {

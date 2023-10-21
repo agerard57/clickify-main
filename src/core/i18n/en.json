@@ -16,6 +16,47 @@
     "current": "EN",
     "switch": "Passer en Francais"
   },
+  "priceBox": {
+    "planComponents": {
+      "popular": "Popular choice",
+      "features": "Features:",
+      "currency": "${{price}}",
+      "month": "/month",
+      "more": "...and all the features from the previous tiers"
+    },
+    "plans": {
+      "basic": {
+        "title": "Basic",
+        "description": "Everything needed to kick start your store, manage your products and process payments",
+        "features": {
+          "1": "Taxes : 1,7% + $0,20 per purchase",
+          "2": "Up until 100 products",
+          "3": "2 Employees accounts"
+        }
+      },
+      "clickify": {
+        "title": "Clickify",
+        "description": "Take your shop to the next level with advanced reporting, lower transactions fees and more staff accounts",
+        "features": {
+          "1": "Taxes : 1,5% + $0,20 per purchase",
+          "2": "Up until 500 products",
+          "3": "5 Employees accounts",
+          "4": "Advanced reporting",
+          "5": "Add multiple stores"
+        }
+      },
+      "premium": {
+        "title": "Premium",
+        "description": "Get the best of Clickify thanks to the previous advantages, as well as more staff accounts and even lower transactions fees",
+        "features": {
+          "1": "Taxes : 1,2% + $0,20 per purchase",
+          "2": "Up until 1000 products",
+          "3": "10 Employees accounts",
+          "4": "In-app customer support"
+        }
+      }
+    }
+  },
   "tooltips": {
     "dashboard": "Go to dashboard ↗",
     "docs": "Go to docs ↗"
