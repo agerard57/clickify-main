@@ -41,6 +41,7 @@
     ]
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^5.3.1",
     "@clickify/clickify-common": "github:agerard57/clickify-common",
     "@emotion/react": "^11.11.0",
     "@emotion/styled": "^11.11.0",
@@ -50,6 +51,7 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@fullpage/react-fullpage": "^0.1.40",
     "@mui/material": "^5.13.3",
+    "aws-amplify": "^5.3.11",
     "axios": "^1.4.0",
     "i18n": "^0.15.1",
     "i18next": "^22.5.0",
