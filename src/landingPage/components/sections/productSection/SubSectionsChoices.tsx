@@ -8,6 +8,16 @@ import { Typography, useTheme } from "@mui/material";
 
 import { ProductSubSections } from "../../../typings";
 
+const SubSectionChoiceTextTitle = styled(HighlightText)`
+  padding: 100px 0;
+`;
+
+const SubSectionChoiceHorizontalSeparator = styled.div`
+  width: 10%;
+  height: 1px;
+  margin: 10px 0;
+`;
+
 interface SubSectionChoiceElementProps {
   item: ProductSubSections;
   isSelected: boolean;
@@ -20,42 +30,35 @@ const SubSectionChoiceElement: FC<SubSectionChoiceElementProps> = ({ item, isSel
 
   const onClick = () => setCurrentSubSection(isSelected ? 0 : item);
 
-  const SubSectionChoice = styled.div`
-    cursor: pointer;
-    user-select: none;
-    padding: 10px 0;
-  `;
-
-  const SubSectionChoiceTextNumber = styled(Typography)`
-    color: ${theme.app.landingPage.sections.product[isSelected ? "selected" : "notSelected"]};
-    padding: 10px 0;
-  `;
-
-  const SubSectionChoiceTextTitle = styled(HighlightText)`
-    padding: 100px 0;
-  `;
-
-  const SubSectionChoiceHorizontalSeparator = styled.div`
-    width: 10%;
-    height: 1px;
-    margin: 10px 0;
-    background-color: ${theme.app.landingPage.sections.product[isSelected ? "selected" : "notSelected"]};
-  `;
-
   return (
-    <SubSectionChoice onClick={onClick}>
-      <SubSectionChoiceTextNumber variant={TypographyVariants.TITLE}>
+    <div onClick={onClick} style={{ cursor: "pointer", userSelect: "none", padding: "10px 0" }}>
+      <Typography
+        variant={TypographyVariants.TITLE}
+        style={{
+          color: theme.app.landingPage.sections.product[isSelected ? "selected" : "notSelected"],
+          padding: "10px 0",
+        }}
+      >
         {t(`product.subSections.${item}.number`)}
-      </SubSectionChoiceTextNumber>
-      <SubSectionChoiceHorizontalSeparator />
+      </Typography>
+      <SubSectionChoiceHorizontalSeparator
+        style={{ backgroundColor: theme.app.landingPage.sections.product[isSelected ? "selected" : "notSelected"] }}
+      />
       <SubSectionChoiceTextTitle
         textVariant={TypographyVariants.SUBTITLE}
         text={t(`product.subSections.${item}.title`)}
         highlightAllText={isSelected}
       />
-    </SubSectionChoice>
+    </div>
   );
 };
+
+const SubSectionChoicesWrapper = styled.div`
+  grid-area: 1 / 1 / 2 / 2;
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+`;
 
 interface SubSectionChoicesProps {
   currentSubSection: ProductSubSections;
@@ -66,22 +69,14 @@ export const SubSectionChoices: FC<SubSectionChoicesProps> = ({ currentSubSectio
   const { t } = useTranslation("LandingPage");
   const theme = useTheme();
 
-  const SubSectionChoicesWrapper = styled.div`
-    grid-area: 1 / 1 / 2 / 2;
-    display: flex;
-    flex-direction: column;
-    padding-right: 20px;
-    border-right: 1px solid ${theme.app.landingPage.sections.product.notSelected};
-  `;
-
-  const SubSectionChoiceSubTitle = styled(Typography)`
-    padding: 20px 0 16px 0;
-  `;
-
   return (
-    <SubSectionChoicesWrapper>
+    <SubSectionChoicesWrapper
+      style={{ borderRight: `1px solid ${theme.app.landingPage.sections.product.notSelected}` }}
+    >
       <Typography variant={TypographyVariants.TITLE}>{t("product.title")}</Typography>
-      <SubSectionChoiceSubTitle variant={TypographyVariants.SUBTITLE}>{t("product.subTitle")}</SubSectionChoiceSubTitle>
+      <Typography variant={TypographyVariants.SUBTITLE} style={{ padding: "20px 0 16px 0" }}>
+        {t("product.subTitle")}
+      </Typography>
       {[1, 2, 3].map((item: ProductSubSections) => (
         <SubSectionChoiceElement
           key={item}

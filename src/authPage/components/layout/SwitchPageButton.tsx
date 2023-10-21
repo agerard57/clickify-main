@@ -30,6 +30,7 @@ export const SwitchPageButton: FC<SwitchPageButtonProps> = ({ page, currentlySel
 
   const handleButtonClick = () => {
     const queryParams = new URLSearchParams(location.search);
+    // TODO WHO R U?
     const newPage = [AuthPages.LOGIN, AuthPages.SIGN_UP].includes(page) ? page : "signUp";
 
     queryParams.set("page", page);

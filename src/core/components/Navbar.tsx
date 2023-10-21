@@ -15,6 +15,23 @@ import { ButtonVariants } from "@/theme";
 
 import { FullLogo } from "../assets";
 
+const HeaderWrapper = styled(Toolbar)`
+  position: fixed;
+  width: -webkit-fill-available;
+  z-index: 1;
+  a {
+    text-decoration: none;
+  }
+`;
+
+const NavBarWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 480px;
+  margin: 0 auto;
+`;
+
 export const Navbar: FC = () => {
   const { t } = useTranslation("Core");
   const theme = useTheme();
@@ -28,37 +45,6 @@ export const Navbar: FC = () => {
 
   const onLanguageClick = () =>
     language.change(language.language === LanguageCode.EN ? LanguageCode.FR : LanguageCode.EN);
-
-  const HeaderWrapper = styled(Toolbar)`
-    position: fixed;
-    width: -webkit-fill-available;
-    background-color: ${theme.app.core.navbar.background};
-    z-index: 1;
-    a {
-      text-decoration: none;
-    }
-  `;
-
-  const Logo = styled.img`
-    margin-left: 20px;
-    width: 112px;
-    height: 24px;
-  `;
-
-  const NavBarWrapper = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 480px;
-    margin: 0 auto;
-  `;
-
-  const ButtonsWrapper = styled.div`
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-right: 20px;
-  `;
 
   useEffect(() => {
     const handleHashChange = () => {
@@ -78,9 +64,9 @@ export const Navbar: FC = () => {
 
   return (
     <>
-      <HeaderWrapper>
+      <HeaderWrapper style={{ backgroundColor: theme.app.core.navbar.background }}>
         <Link to="/">
-          <Logo src={FullLogo} alt="logo" />
+          <img src={FullLogo} alt="logo" style={{ marginLeft: 20, width: 112, height: 24 }} />
         </Link>
         <NavBarWrapper>
           {route.sections.map((section: Sections) => (
@@ -89,7 +75,7 @@ export const Navbar: FC = () => {
             </Link>
           ))}
         </NavBarWrapper>
-        <ButtonsWrapper>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginRight: 20 }}>
           <Link to={{ pathname: Pages.AUTH, search: `page=${AuthPages.SIGN_UP}` }}>
             <Button variant={ButtonVariants.TEXT}>{t("loginButtons.signUp")}</Button>
           </Link>
@@ -104,7 +90,7 @@ export const Navbar: FC = () => {
               {t("languages.current")}
             </Button>
           </Tooltip>
-        </ButtonsWrapper>
+        </div>
       </HeaderWrapper>
     </>
   );

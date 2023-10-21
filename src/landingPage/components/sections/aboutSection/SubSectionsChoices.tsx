@@ -3,22 +3,10 @@ import { useTranslation } from "react-i18next";
 
 import { HighlightText } from "@/core";
 import { TypographyVariants } from "@/theme";
-import styled from "@emotion/styled";
 import { css, useTheme } from "@mui/material";
 
 import { ConstantsContext } from "@/constants";
 import { AboutSubSections } from "../../../typings";
-
-const SubSectionChoicesWrapper = styled.div`
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 5%;
-`;
-
-const Choice = styled.div`
-  cursor: pointer;
-  user-select: none;
-`;
 
 interface SubSectionChoicesProps {
   currentSubSection: AboutSubSections;
@@ -36,13 +24,14 @@ export const SubSectionChoices: FC<SubSectionChoicesProps> = ({ currentSubSectio
   const onMouseLeave = () => setHovering(null);
 
   return (
-    <SubSectionChoicesWrapper>
+    <div style={{ display: "flex", justifyContent: "space-around", marginBottom: "5%" }}>
       {appConstants.landingPage.sections.about.map((choice, index) => (
-        <Choice
+        <div
           key={index}
           onClick={() => onClick(choice)}
           onMouseEnter={() => onMouseEnter(choice)}
           onMouseLeave={onMouseLeave}
+          style={{ cursor: "pointer", userSelect: "none" }}
         >
           <HighlightText
             textVariant={TypographyVariants.TITLE}
@@ -61,8 +50,8 @@ export const SubSectionChoices: FC<SubSectionChoicesProps> = ({ currentSubSectio
                 : undefined
             }
           />
-        </Choice>
+        </div>
       ))}
-    </SubSectionChoicesWrapper>
+    </div>
   );
 };

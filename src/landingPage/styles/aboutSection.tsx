@@ -1,4 +1,4 @@
-import React, { ImgHTMLAttributes } from "react";
+import React, { HTMLAttributes, ImgHTMLAttributes } from "react";
 import styled from "@emotion/styled";
 
 interface WidthProp {
@@ -19,7 +19,7 @@ export const aboutSection = () => {
     height: auto;
   `;
 
-  const Card = styled((props: WidthProp & React.HTMLAttributes<HTMLDivElement>) => <div {...props} />, {
+  const Card = styled((props: WidthProp & HTMLAttributes<HTMLDivElement>) => <div {...props} />, {
     shouldForwardProp: (propName) => propName !== "width",
   })`
     border-radius: 14px;

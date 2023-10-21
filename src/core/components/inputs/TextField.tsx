@@ -1,25 +1,10 @@
-import React, { FC } from "react";
+import React, { FC, HTMLAttributes } from "react";
 
 import { TypographyVariants } from "@/theme";
 import styled from "@emotion/styled";
 import { StandardTextFieldProps, TextField as MuiTextField, Typography } from "@mui/material";
 
-interface TextFieldProps extends StandardTextFieldProps {
-  inputLabel: string;
-  inputPosition?: "left" | "top";
-}
-
-const TextFieldContainer = styled(
-  (props: { inputPosition: TextFieldProps["inputPosition"] } & React.HTMLAttributes<HTMLDivElement>) => (
-    <div {...props} />
-  ),
-  {
-    shouldForwardProp: (propName) => propName !== "inputPosition",
-  },
-)`
-  display: ${({ inputPosition }) => (inputPosition === "top" ? "flex" : "grid")};
-  flex-direction: ${({ inputPosition }) => (inputPosition === "top" ? "column" : "row")};
-  align-items: ${({ inputPosition }) => (inputPosition === "top" ? "flex-start" : "center")};
+const TextFieldContainer = styled.div`
   gap: 20px;
   white-space: nowrap;
   justify-content: center;
@@ -28,9 +13,19 @@ const TextFieldContainer = styled(
   grid-column-gap: 20px;
   justify-items: end;
 `;
+interface TextFieldProps extends StandardTextFieldProps {
+  inputLabel: string;
+  inputPosition?: "left" | "top";
+}
 
 export const TextField: FC<TextFieldProps> = ({ inputLabel, inputPosition = "left", size = "small", ...props }) => (
-  <TextFieldContainer inputPosition={inputPosition}>
+  <TextFieldContainer
+    style={{
+      display: inputPosition === "top" ? "flex" : "grid",
+      flexDirection: inputPosition === "top" ? "column" : "row",
+      alignItems: inputPosition === "top" ? "flex-start" : "center",
+    }}
+  >
     <Typography variant={TypographyVariants.INPUT_LABEL} style={{ gridArea: "1 / 1 / 2 / 2" }}>
       <>
         {inputLabel}
