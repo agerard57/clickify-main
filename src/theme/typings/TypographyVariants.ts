@@ -14,6 +14,7 @@ export type DefaultTypographyPropsVariants = {
 export enum TypographyVariants {
   INHERIT = "inherit",
   TITLE = "title",
+  SMALL_TITLE = "smallTitle",
   SUBTITLE = "subtitle",
   SECTION_TITLE = "sectionTitle",
   SENTENCE = "sentence",
@@ -21,4 +22,5 @@ export enum TypographyVariants {
   SMALL_TEXT = "smallText",
   PARAGRAPH_TITLE = "paragraphTitle",
   INPUT_LABEL = "inputLabel",
+  INPUT_PLACEHOLDER = "inputPlaceholder",
 }

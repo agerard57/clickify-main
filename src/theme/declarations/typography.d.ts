@@ -4,6 +4,7 @@ declare module "@mui/material/Typography" {
   interface TypographyPropsVariantOverrides extends DefaultTypographyPropsVariants {
     [TypographyVariants.INHERIT]: true;
     [TypographyVariants.TITLE]: true;
+    [TypographyVariants.SMALL_TITLE]: true;
     [TypographyVariants.SUBTITLE]: true;
     [TypographyVariants.SECTION_TITLE]: true;
     [TypographyVariants.SENTENCE]: true;
@@ -11,5 +12,6 @@ declare module "@mui/material/Typography" {
     [TypographyVariants.SMALL_TEXT]: true;
     [TypographyVariants.PARAGRAPH_TITLE]: true;
     [TypographyVariants.INPUT_LABEL]: true;
+    [TypographyVariants.INPUT_PLACEHOLDER]: true;
   }
 }

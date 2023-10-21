@@ -14,6 +14,10 @@ export const MuiTypography = {
       fontWeight: 700,
       letterSpacing: "1px",
     },
+    [TypographyVariants.SMALL_TITLE]: {
+      fontSize: 24,
+      fontWeight: 700,
+    },
     [TypographyVariants.SUBTITLE]: {
       fontSize: 20,
       fontWeight: 400,
@@ -34,6 +38,11 @@ export const MuiTypography = {
     [TypographyVariants.INPUT_LABEL]: {
       fontSize: 15,
       fontWeight: 400,
+    },
+    [TypographyVariants.INPUT_PLACEHOLDER]: {
+      fontSize: 13,
+      fontWeight: 500,
+      color: colorPalette.grey,
     },
     [TypographyVariants.SMALL_TEXT]: {
       fontSize: 11,

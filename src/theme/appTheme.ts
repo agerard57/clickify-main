@@ -31,6 +31,9 @@ export const appTheme = {
             notHighlighted: colorPalette.grey,
           },
         },
+        price: {
+          description: colorPalette.grey,
+        },
         product: {
           selected: colorPalette.primaryBlack,
           notSelected: colorPalette.grey,
