@@ -12,7 +12,12 @@ export const Router: FC = () => {
       <Layout>
         <Routes>
           {Object.values(appConstants.routes).map((route) => (
-            <Route key={route.name} path={route.path} element={route.element} />
+            <Route key={route.name} path={`${route.path}`} element={route.element}>
+              {route.subRoutes &&
+                Object.values(route.subRoutes).map((subRoute) => (
+                  <Route key={subRoute.name} path={subRoute.path} element={subRoute.element} />
+                ))}
+            </Route>
           ))}
         </Routes>
       </Layout>
