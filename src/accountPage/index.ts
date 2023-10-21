@@ -1,0 +1,1 @@
+export { AccountSubPages } from "./typings";

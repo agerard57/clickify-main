@@ -59,7 +59,7 @@
         "title": "Basique",
         "description": "Tout ce qui est nécessaire pour démarrer votre boutique, gérer vos produits et traiter les paiements",
         "features": {
-          "1": "Taxes : 1,8% + 0,20$ par achat",
+          "1": "Taxes : 1,7% + 0,20$ par achat",
           "2": "Jusqu'à 100 produits",
           "3": "2 Comptes d'employés"
         }
@@ -68,7 +68,7 @@
         "title": "Clickify",
         "description": "Faites passer votre boutique au niveau supérieur avec des rapports avancés, des frais de transaction réduits et plus de comptes de personnel",
         "features": {
-          "1": "Taxes : 1,6% + 0,20$ par achat",
+          "1": "Taxes : 1,5% + 0,20$ par achat",
           "2": "Jusqu'à 500 produits",
           "3": "5 comptes d'employés",
           "4": "Rapports avancés",
@@ -79,7 +79,7 @@
         "title": "Premium",
         "description": "Obtenez le meilleur de Clickify grâce aux avantages précédents, ainsi que plus de comptes de personnel et des frais de transaction encore plus bas",
         "features": {
-          "1": "Taxes : 1,4% + 0,20 $ par achat",
+          "1": "Taxes : 1,2% + 0,20 $ par achat",
           "2": "Jusqu'à 1000 produits",
           "3": "10 comptes d'employés",
           "4": "Support client in-app"

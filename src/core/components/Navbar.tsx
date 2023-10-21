@@ -10,7 +10,7 @@ import { AuthPages } from "@/authPage";
 import { ConstantsContext } from "@/constants";
 import { Sections } from "@/landingPage";
 import { LanguageCode, useLanguage } from "@/language";
-import { Page } from "@/router";
+import { Pages } from "@/router";
 import { ButtonVariants } from "@/theme";
 
 import { FullLogo } from "../assets";
@@ -22,7 +22,7 @@ export const Navbar: FC = () => {
   const language = useLanguage();
 
   const appConstants = useContext(ConstantsContext);
-  const route = appConstants.routes[Page.LANDING_PAGE];
+  const route = appConstants.routes[Pages.LANDING_PAGE];
 
   const [currentSection, setCurrentSection] = useState<Sections | null>(null);
 
@@ -90,10 +90,10 @@ export const Navbar: FC = () => {
           ))}
         </NavBarWrapper>
         <ButtonsWrapper>
-          <Link to={{ pathname: Page.AUTH, search: `page=${AuthPages.SIGN_UP}` }}>
+          <Link to={{ pathname: Pages.AUTH, search: `page=${AuthPages.SIGN_UP}` }}>
             <Button variant={ButtonVariants.TEXT}>{t("loginButtons.signUp")}</Button>
           </Link>
-          <Link to={{ pathname: Page.AUTH, search: `page=${AuthPages.LOGIN} ` }}>
+          <Link to={{ pathname: Pages.AUTH, search: `page=${AuthPages.LOGIN} ` }}>
             <Button variant={ButtonVariants.PRIMARY}>{t("loginButtons.login")}</Button>
           </Link>
           <Button variant={ButtonVariants.TEXT}>
