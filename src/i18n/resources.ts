@@ -1,7 +1,7 @@
-import { i18n as LandingPage } from "@/landingPage";
-import { i18n as Core } from "@/core";
-import { i18n as AccountPage } from "@/accountPage";
-import { i18n as AuthPage } from "@/authPage";
+import { AccountPage } from "@/accountPage/i18n";
+import { AuthPage } from "@/authPage/i18n";
+import { Core } from "@/core/i18n";
+import { LandingPage } from "@/landingPage/i18n";
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Modules = Record<string, { fr: Record<string, any>; en: Record<string, any> }>;

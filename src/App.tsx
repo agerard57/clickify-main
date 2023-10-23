@@ -5,7 +5,7 @@ import { I18nextProvider } from "react-i18next";
 import { ConstantsProvider } from "@/constants";
 import { i18n } from "@/i18n";
 import { LoadingScreen } from "@/loadingScreen";
-import { Router } from "@/router";
+import { Router } from "@/router/Router";
 import { theme } from "@/theme";
 import { ThemeProvider } from "@mui/material";
 

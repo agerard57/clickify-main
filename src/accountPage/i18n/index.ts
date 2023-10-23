@@ -1,4 +1,6 @@
 import en from "./en.json";
 import fr from "./fr.json";
 
-export { en, fr };
+const AccountPage = { en, fr };
+
+export { AccountPage };

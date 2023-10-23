@@ -1,8 +1,9 @@
+import React, { FC, Fragment } from "react";
+
+import { TypographyVariants } from "@/theme";
+import { SerializedStyles } from "@emotion/react";
 import styled from "@emotion/styled";
 import { Typography, useTheme } from "@mui/material";
-import React, { Fragment } from "react";
-import { SerializedStyles } from "@emotion/react";
-import { TypographyVariants } from "@/theme";
 
 interface HighlightTextProps {
   text: string;
@@ -11,12 +12,12 @@ interface HighlightTextProps {
   overrideStyles?: { nonHighlighted?: SerializedStyles; highlighted?: SerializedStyles };
 }
 
-export const HighlightText = ({
+export const HighlightText: FC<HighlightTextProps> = ({
   text,
   textVariant = TypographyVariants.INHERIT,
   highlightAllText = false,
   overrideStyles,
-}: HighlightTextProps) => {
+}) => {
   const theme = useTheme();
 
   const parts = text.split("\\");

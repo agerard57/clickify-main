@@ -1,6 +1,5 @@
-import { AccountSubPages } from "@/accountPage";
+import { AccountSubPages } from "@/accountPage/typings";
 import { AboutSubSections, Cards, ContactCategory } from "@/landingPage";
-import { routes } from "@/router";
 import { MainSupportTopics, PlanTypes } from "@clickify/clickify-common";
 import { faChartBar, faComment } from "@fortawesome/free-regular-svg-icons";
 import {
@@ -14,7 +13,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 export const appConstants = {
-  routes,
   core: {
     priceBox: {
       plans: [PlanTypes.BASIC, PlanTypes.CLICKIFY, PlanTypes.PREMIUM],

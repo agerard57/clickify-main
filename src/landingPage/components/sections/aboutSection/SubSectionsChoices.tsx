@@ -1,11 +1,11 @@
-import React, { Dispatch, FC, SetStateAction, useContext, useState } from "react";
+import React, { Dispatch, FC, SetStateAction, useState } from "react";
 import { useTranslation } from "react-i18next";
 
+import { useConstants } from "@/constants";
 import { HighlightText } from "@/core";
 import { TypographyVariants } from "@/theme";
 import { css, useTheme } from "@mui/material";
 
-import { ConstantsContext } from "@/constants";
 import { AboutSubSections } from "../../../typings";
 
 interface SubSectionChoicesProps {
@@ -16,7 +16,7 @@ interface SubSectionChoicesProps {
 export const SubSectionChoices: FC<SubSectionChoicesProps> = ({ currentSubSection, setCurrentSubSection }) => {
   const { t } = useTranslation("LandingPage");
   const theme = useTheme();
-  const appConstants = useContext(ConstantsContext);
+  const appConstants = useConstants();
   const [hovering, setHovering] = useState<AboutSubSections | null>(null);
 
   const onClick = (choice: AboutSubSections) => setCurrentSubSection(choice);

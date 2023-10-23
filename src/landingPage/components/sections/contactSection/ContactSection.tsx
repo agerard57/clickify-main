@@ -1,17 +1,17 @@
 import React, { FC, useContext, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { ConstantsContext } from "@/constants";
+import { useConstants } from "@/constants";
 import { TypographyVariants } from "@/theme";
 import { Typography } from "@mui/material";
-import { Cards } from "../../../typings";
 
+import { Cards } from "../../../typings";
 import { Category } from "./Categories";
 import { Modal } from "./modal";
 
 export const ContactSection: FC = () => {
   const { t } = useTranslation("LandingPage");
-  const appConstants = useContext(ConstantsContext);
+  const appConstants = useConstants();
 
   const [open, setOpen] = useState<Cards | null>(null);
 

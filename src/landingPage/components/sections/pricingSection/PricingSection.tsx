@@ -1,14 +1,14 @@
-import React, { FC, useContext } from "react";
+import React, { FC } from "react";
 import { useTranslation } from "react-i18next";
 
-import { ConstantsContext } from "@/constants";
+import { useConstants } from "@/constants";
 import { PriceBox } from "@/core";
 import { TypographyVariants } from "@/theme";
 import { Typography } from "@mui/material";
 
 export const PricingSection: FC = () => {
   const { t } = useTranslation("LandingPage");
-  const appConstants = useContext(ConstantsContext);
+  const appConstants = useConstants();
 
   return (
     <>

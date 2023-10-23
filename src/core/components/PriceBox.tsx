@@ -1,7 +1,7 @@
-import React, { DetailedHTMLProps, FC, HTMLAttributes, useContext, useState } from "react";
+import React, { DetailedHTMLProps, FC, HTMLAttributes, useState } from "react";
 import { useTranslation } from "react-i18next";
 
-import { ConstantsContext } from "@/constants";
+import { useConstants } from "@/constants";
 import { TypographyVariants } from "@/theme";
 import { PlanTypes } from "@clickify/clickify-common";
 import styled from "@emotion/styled";
@@ -58,7 +58,7 @@ interface PriceBoxProps {
 
 export const PriceBox: FC<PriceBoxProps> = ({ plan, isStatic = false }) => {
   const { t } = useTranslation("Core");
-  const appConstants = useContext(ConstantsContext);
+  const appConstants = useConstants();
   const theme = useTheme();
 
   const features = appConstants.core.priceBox;

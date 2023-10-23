@@ -1,17 +1,16 @@
-import React, { FC, useContext } from "react";
+import React, { FC } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import { ConstantsContext } from "@/constants";
-import { Layout } from "@/core";
+import { Layout } from "@/core/components/Layout";
+
+import { routes } from "./Routes";
 
 export const Router: FC = () => {
-  const appConstants = useContext(ConstantsContext);
-
   return (
     <BrowserRouter>
       <Layout>
         <Routes>
-          {Object.values(appConstants.routes).map((route) => (
+          {Object.values(routes).map((route) => (
             <Route key={route.name} path={`${route.path}`} element={route.element}>
               {route.subRoutes &&
                 Object.values(route.subRoutes).map((subRoute) => (

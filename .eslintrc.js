@@ -44,11 +44,5 @@ module.exports = {
     "import/prefer-default-export": "off",
     "import/extensions": "off",
     "react/react-in-jsx-scope": "off",
-    "import/no-internal-modules": [
-      "error",
-      {
-        allow: ["emotion/react"],
-      },
-    ],
   },
 };

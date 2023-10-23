@@ -2,10 +2,11 @@ import i18n from "i18next";
 import LanguageDetector from "i18next-browser-languagedetector";
 import { initReactI18next } from "react-i18next";
 
-import { LanguageCode } from "@/language";
+import { Languages } from "@clickify/clickify-common";
+
 import { resources } from "./resources";
 
-const lng = [LanguageCode.FR, LanguageCode.EN];
+const lng = [Languages.FR, Languages.EN];
 
 i18n
   .use(new LanguageDetector())
@@ -16,7 +17,7 @@ i18n
       order: ["querystring", "localStorage"],
       lookupQuerystring: "lng",
     },
-    fallbackLng: LanguageCode.EN,
+    fallbackLng: Languages.EN,
     interpolation: { escapeValue: false },
     preload: lng,
     react: {

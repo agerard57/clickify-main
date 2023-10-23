@@ -1,4 +1,5 @@
-import { LanguageCode } from "../typings";
+import { Languages } from "@clickify/clickify-common";
 
-export const isLanguageCode = (code: string): code is LanguageCode =>
-  Object.values(LanguageCode).includes(code as LanguageCode);
+type LanguageCode = Languages.EN | Languages.FR;
+
+export const isLanguageCode = (code: string): code is LanguageCode => code === Languages.EN || code === Languages.FR;

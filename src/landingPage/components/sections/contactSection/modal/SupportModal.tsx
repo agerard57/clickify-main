@@ -1,7 +1,7 @@
-import React, { FC, useContext } from "react";
+import React, { FC } from "react";
 import { useTranslation } from "react-i18next";
 
-import { ConstantsContext } from "@/constants";
+import { useConstants } from "@/constants";
 import { TextField } from "@/core";
 import { ButtonVariants, TypographyVariants } from "@/theme";
 import { MainSupportTopics } from "@clickify/clickify-common";
@@ -11,7 +11,7 @@ import { styles } from "../../../../styles";
 
 export const SupportModal: FC = () => {
   const { t } = useTranslation("LandingPage");
-  const appConstants = useContext(ConstantsContext);
+  const appConstants = useConstants();
 
   const { ModalContent, InputContainer } = styles.contactSection();
   const formPrefix = "contact.categories.support.cards.support.modal";

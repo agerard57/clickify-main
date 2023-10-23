@@ -1,17 +1,19 @@
-import React, { FC, useContext, useEffect, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 
+import { AuthPages } from "@/authPage";
+import { useConstants } from "@/constants";
+import { Sections } from "@/landingPage";
+import { useLanguage } from "@/language";
+import { Pages } from "@/router";
+import { routes } from "@/router/Routes";
+import { ButtonVariants } from "@/theme";
+import { Languages } from "@clickify/clickify-common";
 import styled from "@emotion/styled";
 import { faBook } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Button, Toolbar, Tooltip, Typography, useTheme } from "@mui/material";
-import { AuthPages } from "@/authPage";
-import { ConstantsContext } from "@/constants";
-import { Sections } from "@/landingPage";
-import { LanguageCode, useLanguage } from "@/language";
-import { Pages } from "@/router";
-import { ButtonVariants } from "@/theme";
 
 import { FullLogo } from "../assets";
 
@@ -38,13 +40,12 @@ export const Navbar: FC = () => {
   const location = useLocation();
   const language = useLanguage();
 
-  const appConstants = useContext(ConstantsContext);
-  const route = appConstants.routes[Pages.LANDING_PAGE];
+  const appConstants = useConstants();
+  const route = routes[Pages.LANDING_PAGE];
 
   const [currentSection, setCurrentSection] = useState<Sections | null>(null);
 
-  const onLanguageClick = () =>
-    language.change(language.language === LanguageCode.EN ? LanguageCode.FR : LanguageCode.EN);
+  const onLanguageClick = () => language.change(language.language === Languages.EN ? Languages.FR : Languages.EN);
 
   useEffect(() => {
     const handleHashChange = () => {
