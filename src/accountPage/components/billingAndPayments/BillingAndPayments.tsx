@@ -47,22 +47,19 @@ const DataSection = styled.section`
   margin-bottom: 10px;
 `;
 
-export const CompanyInformation: FC = () => {
+export const BillingAndPayments: FC = () => {
   const { t } = useTranslation("AccountPage");
 
   const testObject = {
-    legalName: "Ikea",
-    tradingName: "Ikea EN",
-    email: "ikea@agerard.dev",
     billingAddress: ["1 rue du trou aux Serpents", "57140 La Maxe", "Grand-Est, France"],
-    registeredOn: "2019-04-23",
-    lastPasswordGen: "2022-12-04",
-    updatedOn: "2023-02-02",
+    cardInformation: ["GERARD Alexandre", "••••	•••• •••• 1234", "••/••", "•••"],
   };
 
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-      <Typography variant={TypographyVariants.SMALL_TITLE}>{t("company.title")}</Typography>
+      <Typography variant={TypographyVariants.SMALL_TITLE}>
+        {t("billing.content.display.billingAddress.title")}
+      </Typography>
       <div
         style={{
           borderRadius: 36,
@@ -76,27 +73,35 @@ export const CompanyInformation: FC = () => {
         }}
       >
         <DataSection>
-          <DisplayData label={t("company.content.display.legalName")} placeholders={[testObject.legalName]} />
-          <DisplayData label={t("company.content.display.tradingName")} placeholders={[testObject.tradingName]} />
-        </DataSection>
-        <DataSection>
-          <DisplayData label={t("company.content.display.email")} placeholders={[testObject.email]} />
-        </DataSection>
-        <DataSection>
           <DisplayData
-            label={t("company.content.display.billingAddress")}
+            label={t("billing.content.display.billingAddress.title")}
             placeholders={[...testObject.billingAddress]}
           />
         </DataSection>
+        <Button variant={ButtonVariants.PRIMARY}>{t("billing.content.display.billingAddress.button")}</Button>
+      </div>
+      <Typography variant={TypographyVariants.SMALL_TITLE} style={{ marginTop: 40 }}>
+        {t("billing.content.display.paymentMethod.title")}
+      </Typography>
+      <div
+        style={{
+          borderRadius: 36,
+          border: "1px solid #848484",
+          background: "#FAFAFA",
+          width: 535,
+          flexShrink: 0,
+          margin: 10,
+          padding: 20,
+          display: "grid",
+        }}
+      >
         <DataSection>
-          <DisplayData label={t("company.content.display.registeredOn")} placeholders={[testObject.registeredOn]} />
           <DisplayData
-            label={t("company.content.display.lastPasswordGen")}
-            placeholders={[testObject.lastPasswordGen]}
+            label={t("billing.content.display.paymentMethod.cardInformation.label")}
+            placeholders={[...testObject.cardInformation]}
           />
-          <DisplayData label={t("company.content.display.updatedOn")} placeholders={[testObject.updatedOn]} />
         </DataSection>
-        <Button variant={ButtonVariants.PRIMARY}>{t("company.content.display.button")}</Button>
+        <Button variant={ButtonVariants.PRIMARY}>{t("billing.content.display.paymentMethod.button")}</Button>
       </div>
     </div>
   );

@@ -1,13 +1,14 @@
-import React, { FC, ReactNode, useContext } from "react";
+import React, { FC, ReactNode } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, Outlet } from "react-router-dom";
 
-import { ConstantsContext } from "@/constants";
+import { useConstants } from "@/constants";
 import { TypographyVariants } from "@/theme";
 import styled from "@emotion/styled";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { Divider, Typography } from "@mui/material";
+
 import { AccountSubPages } from "../../typings";
 
 const AccountLayoutContainer = styled.div`
@@ -58,7 +59,7 @@ const LinkBox: FC<LinkBoxProps> = ({ selected = false, children }) => (
 
 export const AccountLayout: FC = () => {
   const { t } = useTranslation("AccountPage");
-  const appConstants = useContext(ConstantsContext);
+  const appConstants = useConstants();
 
   // TODO
   const currentPage = AccountSubPages.COMPANY;
