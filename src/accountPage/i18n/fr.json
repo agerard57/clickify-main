@@ -66,8 +66,8 @@
     "description": "Consultez les informations sur votre plan actuel",
     "content": {
       "noPlan": "Aucun plan",
-      "currentPlan": "Abonné depuis",
-      "expiresOn": "Expire le",
+      "since": "Abonné depuis",
+      "exp": "Expire le",
       "buttons": {
         "changePlan": "Changer de plan",
         "cancelPlan": "Annuler le plan"

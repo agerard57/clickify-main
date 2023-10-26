@@ -5,8 +5,19 @@ import { ButtonVariants, TypographyVariants } from "@/theme";
 import { Languages } from "@clickify/clickify-common";
 import styled from "@emotion/styled";
 import { Button, Typography } from "@mui/material";
-import { DataGrid, enUS, frFR, GridColDef, GridValueGetterParams } from "@mui/x-data-grid";
+import {
+  DataGrid,
+  enUS,
+  frFR,
+  GridActionsCellItem,
+  GridColDef,
+  GridRowParams,
+  GridValueGetterParams,
+} from "@mui/x-data-grid";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { icon } from "@fortawesome/fontawesome-svg-core";
+import { faArrowUp, faFilePdf } from "@fortawesome/free-solid-svg-icons";
 import { useLanguage } from "../../../language";
 
 const LayoutGrid = styled.div`
@@ -47,9 +58,21 @@ export const SubscriptionHistory: FC = () => {
     },
     {
       field: "export",
+      type: "actions",
       headerName: t("history.table.headers.export"),
-      // TODO actions?
       sortable: false,
+      disableColumnMenu: true,
+      /* TODO https://mui.com/x/react-data-grid/export/#custom-export-format */
+      getActions: (params: GridRowParams) => [
+        <GridActionsCellItem
+          key={0}
+          icon={<FontAwesomeIcon icon={faFilePdf} size="1x" />}
+          label={t("history.table.headers.export")}
+          onClick={() => {
+            console.log(params.row.exportLink);
+          }}
+        />,
+      ],
       width: 160,
     },
   ];
@@ -61,7 +84,7 @@ export const SubscriptionHistory: FC = () => {
       since: "04/23/23",
       expired: "04/23/23",
       price: 3404,
-      export: "x",
+      exportLink: "x",
     },
     {
       id: "0b7e92f6-70c3-11ee-b962-0242ac120002",
@@ -69,7 +92,7 @@ export const SubscriptionHistory: FC = () => {
       since: "12/05/23",
       expired: "03/20/23",
       price: 3249,
-      export: "x",
+      exportLink: "x",
     },
     {
       id: "11c3fb74-70c3-11ee-b962-0242ac120002",
@@ -77,7 +100,7 @@ export const SubscriptionHistory: FC = () => {
       since: "06/23/22",
       expired: "02/20/22",
       price: 5923,
-      export: "x",
+      exportLink: "x",
     },
     {
       id: "11c3eb74-70c3-11ee-b962-0242ac120002",
@@ -85,7 +108,7 @@ export const SubscriptionHistory: FC = () => {
       since: "10/12/21",
       expired: "09/10/21",
       price: 5324,
-      export: "x",
+      exportLink: "x",
     },
     {
       id: "11c2fb74-70c3-11ee-b962-0242ac120002",
@@ -93,13 +116,13 @@ export const SubscriptionHistory: FC = () => {
       since: "05/01/21",
       expired: "04/03/21",
       price: 34,
-      export: "x",
+      exportLink: "x",
     },
   ];
 
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center" }}>
-      <Typography variant={TypographyVariants.SMALL_TITLE}>{t("company.title")}</Typography>
+      <Typography variant={TypographyVariants.SMALL_TITLE}>{t("history.title")}</Typography>
       <DataGrid
         rows={rows}
         columns={columns}
@@ -109,7 +132,7 @@ export const SubscriptionHistory: FC = () => {
           },
         }}
         pageSizeOptions={[5, 10]}
-        style={{ width: "80%" }}
+        style={{ width: "100%", marginTop: 20 }}
         hideFooterSelectedRowCount
         localeText={
           language === Languages.EN

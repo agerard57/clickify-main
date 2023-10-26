@@ -66,8 +66,8 @@
     "description": "See infos about your current plan ",
     "content": {
       "noPlan": "No plan",
-      "currentPlan": "Subscribed since",
-      "expiresOn": "Expires on",
+      "since": "Subscribed since",
+      "exp": "Expires on",
       "buttons": {
         "changePlan": "Change plan",
         "cancelPlan": "Cancel plan"

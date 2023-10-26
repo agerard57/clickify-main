@@ -67,7 +67,7 @@ export const BillingAndPayments: FC = () => {
           background: "#FAFAFA",
           width: 535,
           flexShrink: 0,
-          margin: 10,
+          margin: 20,
           padding: 20,
           display: "grid",
         }}

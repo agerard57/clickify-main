@@ -1,9 +1,9 @@
 import React, { FC } from "react";
 import { useTranslation } from "react-i18next";
 
+import { ButtonVariants, TypographyVariants } from "@/theme";
 import styled from "@emotion/styled";
 import { Button, Typography } from "@mui/material";
-import { ButtonVariants, TypographyVariants } from "@/theme";
 
 const LayoutGrid = styled.div`
   display: grid;
@@ -44,7 +44,7 @@ const DisplayData: FC<DisplayDataProps> = ({ label, placeholders }) => {
 };
 
 const DataSection = styled.section`
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 `;
 
 export const CompanyInformation: FC = () => {
@@ -70,7 +70,7 @@ export const CompanyInformation: FC = () => {
           background: "#FAFAFA",
           width: 535,
           flexShrink: 0,
-          margin: 10,
+          margin: 20,
           padding: 20,
           display: "grid",
         }}
