@@ -29,7 +29,7 @@ const Box = styled(
   flex-direction: column;
   border-radius: 14px;
   width: 28vw;
-  height: ${({ isStatic, isPopularChoice }) => (!isStatic && isPopularChoice ? "32vh" : "28vh")};
+  height: ${({ isStatic, isPopularChoice }) => (!isStatic && isPopularChoice ? "280px" : "260px")};
   box-shadow: 0px 0px 14px -3px rgba(0, 0, 0, 0.25);
   padding: 20px 15px;
   border: 1px solid #b1b1b1;
