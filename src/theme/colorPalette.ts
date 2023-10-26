@@ -7,5 +7,6 @@ export const colorPalette = {
     from: "#1b39cd",
     to: "#6a91f5",
   },
+  red: "#FF6565",
   white: "#FFFFFF",
 } as const;

@@ -8,6 +8,19 @@ export const appTheme = {
       },
       highlightedText: `linear-gradient(45deg, ${colorPalette.blueGradient.from} 100%, ${colorPalette.blueGradient.to} 100%)`,
     },
+    accountPage: {
+      accountLayout: {
+        descriptionColor: colorPalette.grey,
+        dividerColor: colorPalette.grey,
+        unselectedFontWeight: 400,
+        selectedFontWeight: 700,
+        closeButtonColor: colorPalette.red,
+        externalIconColor: colorPalette.primaryBlack,
+      },
+      currentPlan: {
+        cancelButton: colorPalette.red,
+      },
+    },
     auth: {
       switchButton: {
         textColor: colorPalette.white,

@@ -19,6 +19,7 @@ export const MuiButton = {
     },
     [ButtonVariants.TEXT]: {
       fontSize: 14,
+      borderRadius: 23,
       minWidth: 0,
     },
   },
